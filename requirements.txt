@@ -1,3 +1,6 @@
-altair
 pandas
+numpy
 streamlit
+plotly.express
+openpyxl
+Pillow
