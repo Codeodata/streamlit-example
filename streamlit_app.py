@@ -1,38 +1,123 @@
-from collections import namedtuple
-import altair as alt
-import math
-import pandas as pd
 import streamlit as st
-
-"""
-# Welcome to Streamlit!
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
-
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
+import pandas as pd
+import plotly.express as px
+import openpyxl
 
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
+st.set_page_config(page_title='CDT')
 
-    Point = namedtuple('Point', 'x y')
-    data = []
+archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
-    points_per_turn = total_points / num_turns
+option1 = st.selectbox(
+    'Participante 1:',
+    ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+)
 
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
+option2 = st.selectbox(
+    'Participante 2:',
+    ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+)
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
+option4 = st.selectbox(
+    'Participante 3:',
+    ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+)
+
+
+option3 = st.selectbox(
+    'Horario:',
+    ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 to 00:00','Turno Noche - 00:00 to 08:00')
+)
+
+def add_note():
+    # Aquí puedes agregar el código para guardar la nota en una base de datos
+    st.write(f"Comentarios del Turno: {note}")
+    st.write(f"Comentarios del Turno: {note2}")
+    st.write(f"Comentarios del Turno: {note3}")
+# Mostrar el campo de entrada de texto para agregar notas
+note = st.text_input('*', key='new_note')
+note2 = st.text_input('*', key='new_note2')
+note3 = st.text_input('*', key='new_note3')
+
+from PIL import Image
+image = Image.open('tecnotree.jpg')
+st.image(image, caption='')
+
+
+from datetime import datetime
+
+# Obtener la fecha actual
+today = datetime.today().strftime('%Y-%m-%d')
+
+# Mostrar la fecha actual en Streamlit
+st.header('Service Desk - Cambio de Turno - {}'.format(today) )
+
+# Dividir la pantalla en dos columnas
+col1, col2, col3 = st.columns(3)
+
+# Mostrar Turnos del Equipo
+st.subheader('{}'.format(option3))
+
+
+# Mostrar los partcipantes
+with col1:
+    st.subheader('{}'.format(option1))
+with col2:
+    st.subheader('{}'.format(option2))
+with col3:
+    st.subheader('{}'.format(option4))
+
+
+
+add_note()
+
+st.sidebar.subheader('Actividades Service Desk')
+
+acti_cenam = st.sidebar.checkbox('Actividad Cenam')
+acti_aup = st.sidebar.checkbox('Actividad AUP')
+acti_ecuador = st.sidebar.checkbox('Actividad Ecuador')
+
+
+if acti_cenam:
+    with col1:
+        encargado = st.sidebar.selectbox(
+        'Encargado:',
+        ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+        )
+        horario = st.sidebar.radio("Inicio Actividad",('','22:00','23:00','00:00','1:00','2:00'))
+
+    st.subheader('Actividad CENAM:{}'.format(encargado))
+    st.subheader('* La actividad en CENAM comienza a las : {}hs'.format(horario))
+
+if acti_aup:
+    with col1:
+        encargado2 = st.sidebar.selectbox(
+        'Encargado 2:',
+        ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+        )
+        horario2 = st.sidebar.radio("Inicio 2da Actividad",('','22:00','23:00','00:00','1:00','2:00'))
+
+    st.subheader('---')
+    st.subheader('Actividad AUP:{}'.format(encargado2))
+    st.subheader('* La actividad en AUP comienza a las : {}hs'.format(horario2))
+
+if acti_ecuador:
+    with col1:
+        encargado3 = st.sidebar.selectbox(
+        'Encargado 3:',
+        ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+        )
+        horario3 = st.sidebar.radio("Inicio 3ra Actividad",('','22:00','23:00','00:00','1:00','2:00'))
+    
+    st.subheader('Actividad ECUADOR:{}'.format(encargado3))
+    st.subheader('La actividad en ECUADOR comienza a las : {}hs'.format(horario3))
+
+
+# Leer el excel
+if archivo_cdt:
+    st.markdown('---')
+    df = pd.read_csv(archivo_cdt, engine='python')
+    # Convertir el DataFrame a una tabla HTML
+    tabla_html = df.to_html(index=False)
+    st.write(tabla_html, unsafe_allow_html=True)
+
