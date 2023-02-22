@@ -9,7 +9,7 @@ from PIL import Image
 from datetime import datetime
 from streamlit_lottie import st_lottie 
 
-
+st.set_page_config(layout="wide")
 st.set_page_config(page_title='CDT')
 
 def load_lottiefile(filepath: str):
