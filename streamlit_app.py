@@ -116,7 +116,7 @@ st.title('Service Desk - Cambio de Turno - {}'.format(today) )
 st.subheader('')
 
 # Mostrar Turnos del Equipo
-st.subheader('{}'.format(option3),text_align="center")
+st.subheader('{}'.format(option3))
 st.subheader('')
 
 # Mostrar participantes
