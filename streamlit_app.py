@@ -112,15 +112,15 @@ st.image(image, caption='',use_column_width=False)
 today = datetime.today().strftime('%Y-%m-%d')
 
 # Mostrar la fecha actual en Streamlit
-st.header('Service Desk - Cambio de Turno - {}'.format(today) )
+st.title('Service Desk - Cambio de Turno - {}'.format(today) )
 st.subheader('')
 
 # Mostrar Turnos del Equipo
-st.subheader('{}'.format(option3))
+st.subheader('{}'.format(option3),text_align="center")
 st.subheader('')
 
 # Mostrar participantes
-st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
+st.subheader(f"Participantes:  {option1} - {option2} - {option4}", text_align="center")
 st.subheader('')
 
 add_note()
