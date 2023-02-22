@@ -4,7 +4,5 @@ streamlit
 plotly.express
 openpyxl
 Pillow
-#json
 requests
-#lottiefile
-#streamlit_lottie
+streamlit-lottie
