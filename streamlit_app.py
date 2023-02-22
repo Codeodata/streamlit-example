@@ -37,9 +37,9 @@ with col3:
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
     st.subheader(f"Comentarios del Turno:")
-    st.write(f"* {note}")
-    st.write(f"* {note2}")
-    st.write(f"* {note3}")
+    st.write(f" {note}")
+    st.write(f" {note2}")
+    st.write(f" {note3}")
 
 # Mostrar el campo de entrada de texto para agregar notas
 st.subheader('Comentarios del Turno👇')
@@ -56,16 +56,20 @@ option3 = st.sidebar.radio(
 #Mostrar Imagen TN3
 image = Image.open('tecnotree.jpg')
 st.image(image, caption='')
-
+st.subheader('')
+st.subheader('')
 # Obtener la fecha actual
 today = datetime.today().strftime('%Y-%m-%d')
-
+st.subheader('')
+st.subheader('')
 # Mostrar la fecha actual en Streamlit
 st.header('Service Desk - Cambio de Turno - {}'.format(today) )
-
+st.subheader('')
+st.subheader('')
 # Mostrar Turnos del Equipo
 st.subheader('{}'.format(option3))
-
+st.subheader('')
+st.subheader('')
 # Mostrar participantes
 st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
 
