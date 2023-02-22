@@ -2,17 +2,42 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import openpyxl
+import requests
+import json
+
 from PIL import Image
 from datetime import datetime
+from streamlit_lottie import st_lottie 
+
 
 st.set_page_config(page_title='CDT')
 
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+
+    return r.json()
+
+lottie_coding = load_lottiefile("coding.json")
+lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json")
+
+
+st.title( "Cambio de Turno - Service Desk")
+
+
+#Lector de Archivo Excel
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
 
-# Mostrar los partcipantes
+# Mostrar los participantes
 with col1:
     option1 = st.selectbox(
     ' Participante 1:',
@@ -33,7 +58,20 @@ with col3:
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
     )
 
-#Comentarios    
+
+st_lottie(
+    lottie_coding,
+    speed=1,
+    reverse=False,
+    loop=True,
+    quality="low",
+    height=500,
+    width=600,
+    key=None
+)
+
+
+# Comentarios    
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
     st.subheader(f"Comentarios del Turno:")
@@ -60,22 +98,17 @@ st.image(image, caption='')
 
 # Obtener la fecha actual
 today = datetime.today().strftime('%Y-%m-%d')
-st.subheader('')
-st.subheader('')
 
 # Mostrar la fecha actual en Streamlit
 st.header('Service Desk - Cambio de Turno - {}'.format(today) )
-st.subheader('')
 st.subheader('')
 
 # Mostrar Turnos del Equipo
 st.subheader('{}'.format(option3))
 st.subheader('')
-st.subheader('')
 
 # Mostrar participantes
 st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
-st.subheader('')
 st.subheader('')
 
 add_note()
