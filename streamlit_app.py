@@ -39,7 +39,7 @@ col1, col2, col3 = st.columns(3)
 # Mostrar los participantes
 with col1:
     option1 = st.selectbox(
-    ' Participante 1 👨‍🦰:',
+    ' Participante 1 👨:',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
 
@@ -67,7 +67,7 @@ def add_note():
     st.write(f" {note2}")
 
     #if not acti_aup or acti_cenam or acti_ecuador:
-    st.subheader(f"Comentarios de la Actividad :")
+    st.subheader(f"Comentarios de la Actividad:")
     st.write(f" {note3}")
     st.write(f" {note4}")
 
@@ -100,7 +100,7 @@ with col2:
 
 # Turnos
 option3 = st.sidebar.radio(
-        'Horario:',
+        'Horario ⌚:',
         ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 to 00:00','Turno Noche - 00:00 to 08:00')
     )
 
