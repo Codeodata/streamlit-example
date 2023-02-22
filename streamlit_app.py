@@ -59,12 +59,12 @@ with col3:
 
 st_lottie(
     lottie_coding,
-    speed=1,
+    speed=0.7,
     reverse=False,
     loop=True,
    quality="low",
-   height=500,
-   width=500,
+   height=700,
+   width=300,
    key=None)
 
 
