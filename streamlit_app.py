@@ -39,22 +39,22 @@ col1, col2, col3 = st.columns(3)
 # Mostrar los participantes
 with col1:
     option1 = st.selectbox(
-    ' Participante 1 👨:',
+    ' Participante 1 👨',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
 
 
 with col2:
     option2 = st.selectbox(
-    ' Participante 2 👩‍🦰:',
-    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
+    ' Participante 2 👩‍🦰',
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
     )
 
 
 with col3:
     option4 = st.selectbox(
-    ' Participante 3 👨‍🦰:',
-    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
+    ' Participante 3 👨‍🦰',
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
     )
 
 
@@ -125,7 +125,7 @@ st.subheader('')
 
 add_note()
 
-st.sidebar.subheader('Actividades Service Desk 🧑‍💻🗒️')
+st.sidebar.subheader('Actividades Service Desk 💻')
 
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
 acti_aup = st.sidebar.checkbox('Actividad AUP')
@@ -136,7 +136,7 @@ if acti_cenam:
     with col1:
         encargado = st.sidebar.selectbox(
         'Encargado:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -149,7 +149,7 @@ if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
         'Encargado 2:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -160,7 +160,7 @@ if acti_ecuador:
     with col1:
         encargado3 = st.sidebar.selectbox(
         'Encargado 3:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
