@@ -72,7 +72,8 @@ st.subheader('')
 st.subheader('')
 # Mostrar participantes
 st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
-
+st.subheader('')
+st.subheader('')
 
 add_note()
 
@@ -92,6 +93,7 @@ if acti_cenam:
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader('Actividad CENAM:{}'.format(encargado))
+    st.subheader('')
     st.subheader('* La actividad en CENAM comienza a las : {}hs'.format(horario))
 
 if acti_aup:
@@ -104,6 +106,7 @@ if acti_aup:
 
     st.subheader('---')
     st.subheader('Actividad AUP:{}'.format(encargado2))
+    st.subheader('')
     st.subheader('* La actividad en AUP comienza a las : {}hs'.format(horario2))
 
 if acti_ecuador:
@@ -115,12 +118,14 @@ if acti_ecuador:
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
     st.subheader('Actividad ECUADOR:{}'.format(encargado3))
+    st.subheader('')
     st.subheader('La actividad en ECUADOR comienza a las : {}hs'.format(horario3))
-
+    st.subheader('')
 
 # Leer el excel
 if archivo_cdt:
     st.markdown('---')
+    st.subheader('')
     df = pd.read_csv(archivo_cdt, engine='python')
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
