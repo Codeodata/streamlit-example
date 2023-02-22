@@ -39,21 +39,21 @@ col1, col2, col3 = st.columns(3)
 # Mostrar los participantes
 with col1:
     option1 = st.selectbox(
-    ' Participante 1:',
+    ' Participante 1 👨‍🦰:',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
 
 
 with col2:
     option2 = st.selectbox(
-    ' Participante 2:',
+    ' Participante 2 👩‍🦰:',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
     )
 
 
 with col3:
     option4 = st.selectbox(
-    ' Participante 3:',
+    ' Participante 3 👨‍🦰:',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
     )
 
@@ -67,7 +67,7 @@ def add_note():
     st.write(f" {note2}")
 
     #if not acti_aup or acti_cenam or acti_ecuador:
-    st.subheader(f"Comentarios de la Actividad:")
+    st.subheader(f"Comentarios de la Actividad :")
     st.write(f" {note3}")
     st.write(f" {note4}")
 
