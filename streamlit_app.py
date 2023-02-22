@@ -4,6 +4,13 @@ import plotly.express as px
 import openpyxl
 from PIL import Image
 from datetime import datetime
+import json
+import streamlit as st
+
+with open('theme.json') as f:
+    theme = json.load(f)
+
+st.set_page_config(**theme)
 
 st.set_page_config(page_title='CDT')
 
