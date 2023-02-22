@@ -16,23 +16,24 @@ col1, col2, col3 = st.columns(3)
 with col1:
     option1 = st.selectbox(
     ' Participante 1:',
-    ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
 )
 
 
 with col2:
     option2 = st.selectbox(
     ' Participante 2:',
-    ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
-)
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+    )
 
 
 with col3:
     option4 = st.selectbox(
     ' Participante 3:',
-    ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
-)
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+    )
 
+#Comentarios    
 
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
@@ -48,28 +49,35 @@ note2 = st.text_input('', key='new_note2')
 note3 = st.text_input('', key='new_note3')
 
 
+# Turnos
+
 option3 = st.sidebar.radio(
         'Horario:',
         ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 to 00:00','Turno Noche - 00:00 to 08:00')
     )
 
 #Mostrar Imagen TN3
+
 image = Image.open('tecnotree.jpg')
 st.image(image, caption='')
 st.subheader('')
 st.subheader('')
+
 # Obtener la fecha actual
 today = datetime.today().strftime('%Y-%m-%d')
 st.subheader('')
 st.subheader('')
+
 # Mostrar la fecha actual en Streamlit
 st.header('Service Desk - Cambio de Turno - {}'.format(today) )
 st.subheader('')
 st.subheader('')
+
 # Mostrar Turnos del Equipo
 st.subheader('{}'.format(option3))
 st.subheader('')
 st.subheader('')
+
 # Mostrar participantes
 st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
 st.subheader('')
@@ -88,7 +96,7 @@ if acti_cenam:
     with col1:
         encargado = st.sidebar.selectbox(
         'Encargado:',
-        ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -99,7 +107,7 @@ if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
         'Encargado 2:',
-        ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -110,7 +118,7 @@ if acti_ecuador:
     with col1:
         encargado3 = st.sidebar.selectbox(
         'Encargado 3:',
-        ('','Carlos Novoa', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','Brian LLanos','Emiliano Godoy', 'Paula Aviles','Rodrigo Ginenez')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
