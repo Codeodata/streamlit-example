@@ -4,3 +4,6 @@ streamlit
 plotly.express
 openpyxl
 Pillow
+json
+requests
+lottiefile
