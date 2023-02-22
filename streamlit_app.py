@@ -16,25 +16,24 @@ col1, col2, col3 = st.columns(3)
 with col1:
     option1 = st.selectbox(
     ' Participante 1:',
-    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
 
 
 with col2:
     option2 = st.selectbox(
     ' Participante 2:',
-    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
     )
 
 
 with col3:
     option4 = st.selectbox(
     ' Participante 3:',
-    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
     )
 
 #Comentarios    
-
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
     st.subheader(f"Comentarios del Turno:")
@@ -50,18 +49,14 @@ note3 = st.text_input('', key='new_note3')
 
 
 # Turnos
-
 option3 = st.sidebar.radio(
         'Horario:',
         ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 to 00:00','Turno Noche - 00:00 to 08:00')
     )
 
 #Mostrar Imagen TN3
-
 image = Image.open('tecnotree.jpg')
 st.image(image, caption='')
-st.subheader('')
-st.subheader('')
 
 # Obtener la fecha actual
 today = datetime.today().strftime('%Y-%m-%d')
@@ -96,34 +91,34 @@ if acti_cenam:
     with col1:
         encargado = st.sidebar.selectbox(
         'Encargado:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader(f'Actividad CENAM: {encargado} ')
-    st.subheader(f'La actividad en CENAM comienza a las : {horario}hs')
+    st.subheader(f'La actividad en CENAM comienza a las {horario}hs')
 
 if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
         'Encargado 2:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader(f'Actividad AUP: {encargado2} ')
-    st.subheader(f'La actividad en AUP comienza a las : {horario2}hs')
+    st.subheader(f'La actividad en AUP comienza a las {horario2}hs')
 
 if acti_ecuador:
     with col1:
         encargado3 = st.sidebar.selectbox(
         'Encargado 3:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Rodrigo Ginenez')
+        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
     st.subheader(f'Actividad ECUADOR: {encargado3} ')
-    st.subheader(f'La actividad en ECUADOR comienza a las : {horario3}hs')
+    st.subheader(f'La actividad en ECUADOR comienza a las {horario3}hs')
     st.subheader('')
 
 # Leer el excel
