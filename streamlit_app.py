@@ -30,7 +30,7 @@ st.title( "Cambio de Turno - Service Desk")
 
 
 #Lector de Archivo Excel
-archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
+archivo_cdt = st.sidebar.file_uploader('Ingrese un archivo CSV', type='csv')
 
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
