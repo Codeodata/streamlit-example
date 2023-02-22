@@ -100,7 +100,7 @@ with col2:
 
 # Turnos
 option3 = st.sidebar.radio(
-        'Horario ⌚:',
+        'Horario ⌚',
         ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 to 00:00','Turno Noche - 00:00 to 08:00')
     )
 
