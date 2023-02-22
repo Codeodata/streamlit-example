@@ -4,7 +4,7 @@ import plotly.express as px
 import openpyxl
 import requests
 import json
-#import streamlit_lottie
+import streamlit_lottie
 
 from PIL import Image
 from datetime import datetime
