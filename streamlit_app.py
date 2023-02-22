@@ -57,15 +57,15 @@ with col3:
     )
 
 
-#st_lottie(
-#    lottie_coding,
-#    speed=1,
-#    reverse=False,
-#    loop=True,
-#    quality="low",
-#   height=500,
-#   width=600,
-#   key=None3)
+st_lottie(
+    lottie_coding,
+    speed=1,
+    reverse=False,
+    loop=True,
+   quality="low",
+   height=500,
+   width=600,
+   key=None3)
 
 
 # Comentarios    
