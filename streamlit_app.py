@@ -73,7 +73,7 @@ def add_note():
 
 # Mostrar el campo de entrada de texto para agregar notas
 with col1:
-    st.subheader('Comentarios del    Turno 🗒️ ')
+    st.subheader('Comentarios  del   Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
     
