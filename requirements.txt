@@ -7,3 +7,4 @@ Pillow
 json
 requests
 lottiefile
+streamlit_lottie
