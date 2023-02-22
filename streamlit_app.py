@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import openpyxl
-#import requests
+import requests
 #import json
 #import streamlit_lottie
 
@@ -43,7 +43,7 @@ with col1:
     option1 = st.selectbox(
     ' Participante 1:',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
-)
+    )
 
 
 with col2:
