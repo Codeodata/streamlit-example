@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import openpyxl
 import requests
-#import json
+import json
 #import streamlit_lottie
 
 from PIL import Image
@@ -23,7 +23,7 @@ def load_lottieurl(url: str):
 
     return r.json()
 
-lottie_coding = load_lottiefile("/streamlit-example/coding.json")
+lottie_coding = load_lottiefile("coding.json")
 lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json")
 
 st.title( "Cambio de Turno - Service Desk")
