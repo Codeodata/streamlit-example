@@ -5,6 +5,6 @@ plotly.express
 openpyxl
 Pillow
 #json
-#requests
+requests
 #lottiefile
 #streamlit_lottie
