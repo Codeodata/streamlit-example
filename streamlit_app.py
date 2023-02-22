@@ -4,17 +4,18 @@ import plotly.express as px
 import openpyxl
 import requests
 import json
-import streamlit_lottie
 
 from PIL import Image
 from datetime import datetime
 from streamlit_lottie import st_lottie 
+
 
 st.set_page_config(page_title='CDT')
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
+
 
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -26,11 +27,12 @@ def load_lottieurl(url: str):
 lottie_coding = load_lottiefile("coding.json")
 lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json")
 
-st.title( "Cambio de Turno - Service Desk")
+
+st.title( "Cambio de Turno - Service Desk ⏱️")
 
 
 #Lector de Archivo Excel
-archivo_cdt = st.sidebar.file_uploader('Ingrese un archivo CSV', type='csv')
+archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
@@ -40,7 +42,7 @@ with col1:
     option1 = st.selectbox(
     ' Participante 1:',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
-    )
+)
 
 
 with col2:
@@ -57,16 +59,6 @@ with col3:
     )
 
 
-st_lottie(
-    lottie_coding,
-    speed=0.9,
-    reverse=False,
-    loop=True,
-   quality="low",
-   height=500,
-   width=600,
-   key=None)
-
 
 # Comentarios    
 def add_note():
@@ -74,13 +66,37 @@ def add_note():
     st.subheader(f"Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
+
+    #if not acti_aup or acti_cenam or acti_ecuador:
+    st.subheader(f"Comentarios de la Actividad:")
     st.write(f" {note3}")
+    st.write(f" {note4}")
 
 # Mostrar el campo de entrada de texto para agregar notas
-st.subheader('Comentarios del Turno👇')
-note = st.text_input('', key='new_note')
-note2 = st.text_input('', key='new_note2')
-note3 = st.text_input('', key='new_note3')
+with col1:
+    st.subheader('Comentarios del Turno 🗒️ ')
+    note = st.text_input('', key='new_note')
+    note2 = st.text_input('', key='new_note2')
+    
+
+with col3:
+    st.subheader('Comentarios de Actividad 🗓️')
+    note3 = st.text_input('', key='new_note3')
+    note4 = st.text_input('', key='new_note4')
+
+
+# Imagen monitoreo
+with col2:
+    st_lottie(
+        lottie_coding,
+        speed=1,
+        reverse=False,
+        loop=True,
+        quality="low",
+        height=300,
+        width=300,
+        key=None
+    )
 
 
 # Turnos
@@ -127,6 +143,8 @@ if acti_cenam:
 
     st.subheader(f'Actividad CENAM: {encargado} ')
     st.subheader(f'La actividad en CENAM comienza a las {horario}hs')
+    st.subheader(f'{note3}')
+    st.subheader(f'{note4}')
 
 if acti_aup:
     with col1:
