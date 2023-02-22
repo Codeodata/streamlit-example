@@ -65,7 +65,7 @@ st_lottie(
    quality="low",
    height=500,
    width=600,
-   key=None3)
+   key=None)
 
 
 # Comentarios    
