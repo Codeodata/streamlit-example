@@ -8,16 +8,13 @@ import requests
 
 from PIL import Image
 from datetime import datetime
-
 from streamlit_lottie import st_lottie 
-
 
 st.set_page_config(page_title='CDT')
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
-
 
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -26,7 +23,7 @@ def load_lottieurl(url: str):
 
     return r.json()
 
-lottie_coding = load_lottiefile("/streamlit-example/coding.json")
+lottie_coding = load_lottiefile("coding.json")
 lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json")
 
 st.title( "Cambio de Turno - Service Desk")
