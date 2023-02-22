@@ -106,7 +106,7 @@ option3 = st.sidebar.radio(
 
 #Mostrar Imagen TN3
 image = Image.open('tecnotree.jpg')
-st.image(image, caption='')
+st.image(image, caption='',use_column_width=True)
 
 # Obtener la fecha actual
 today = datetime.today().strftime('%Y-%m-%d')
