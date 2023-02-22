@@ -63,7 +63,7 @@ with col3:
 # Comentarios    
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
-    st.subheader(f"Comentarios del Turno:")
+    st.subheader(f"Comentarios de   Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
 
