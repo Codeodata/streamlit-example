@@ -125,7 +125,7 @@ st.subheader('')
 
 add_note()
 
-st.sidebar.subheader('Actividades Service Desk')
+st.sidebar.subheader('Actividades Service Desk 🧑‍💻🗒️')
 
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
 acti_aup = st.sidebar.checkbox('Actividad AUP')
