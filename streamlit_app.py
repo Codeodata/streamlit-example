@@ -120,7 +120,7 @@ st.subheader('{}'.format(option3))
 st.subheader('')
 
 # Mostrar participantes
-st.subheader(f"Participantes:  {option1} - {option2} - {option4}", text_align="center")
+st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
 st.subheader('')
 
 add_note()
