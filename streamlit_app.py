@@ -63,7 +63,7 @@ st_lottie(
     reverse=False,
     loop=True,
    quality="low",
-   height=700,
+   height=500,
    width=600,
    key=None)
 
