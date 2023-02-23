@@ -39,7 +39,7 @@ with col1:
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
     
-with col3:
+with col2:
     lottie_url="https://assets5.lottiefiles.com/private_files/lf30_lps8ojuw.json"
     st_lottie_animation = load_lottieurl(lottie_url)
     st_lottie(st_lottie_animation)
