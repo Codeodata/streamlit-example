@@ -23,10 +23,6 @@ def load_lottieurl(url: str):
 
     return r.json()
 
-lottie_coding = load_lottiefile("coding.json")
-lottie_hello = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json")
-
-
 st.title( "Cambio de Turno - Service Desk ⏱️")
 
 
@@ -42,13 +38,11 @@ with col1:
     ' Participante 1 👨',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
-
-
-with col2:
-    option2 = st.selectbox(
-    ' Participante 2 👩‍🦰',
-    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
-    )
+    
+with col3:
+    lottie_url="https://assets5.lottiefiles.com/private_files/lf30_lps8ojuw.json"
+    st_lottie_animation = load_lottieurl(lottie_url)
+    st_lottie(st_lottie_animation)
 
 
 with col3:
