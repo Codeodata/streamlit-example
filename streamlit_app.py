@@ -191,8 +191,7 @@ if archivo_cdt:
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     
-    
-    st.subheader("Casos asignados durante el turno ")
-    st.write(tabla_html, unsafe_allow_html=True)
+    st.markdown(f'<div style="overflow-x: auto; width: 500px">{tabla_html}</div>', unsafe_allow_html=True)
+
     
     
