@@ -76,8 +76,7 @@ with col1:
 
 # Imagen    
 with col2:
-    lottie_url="https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json"
-    st_lottie_animation = load_lottieurl(lottie_url)
+    st_lottie_animation = load_lottie("coding.json")
     st_lottie(st_lottie_animation,
               speed=0.9,
               reverse=False,
