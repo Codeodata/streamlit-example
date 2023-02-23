@@ -188,7 +188,7 @@ if archivo_cdt:
         st.metric(label="Total de Casos", value=num_filas)
     with col5:
         # Crear el gráfico de anillos con plotly
-        fig = px.pie(df, values='Estado', names='Estado', hole=0.5)
+        fig = px.pie(df, values=num_filas, names='Estado', hole=0.5)
         # Mostrar el gráfico en Streamlit
         st.plotly_chart(fig)
         
