@@ -182,7 +182,7 @@ if archivo_cdt:
     with col3:
         #Tarjeta de casos en Investigacion:
         investigacion = (df['Estado'] == 'En investigacion').sum()
-        st.metric(label="Casos en Investigación",value=investigación)
+        st.metric(label="Casos en Investigación",value=investigacion)
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     
