@@ -81,7 +81,7 @@ with col2:
               loop=True,
               quality="low",
               height=300,
-              width=200,
+              width=300,
               key=None)   
     
 # Comentarios Actividad
