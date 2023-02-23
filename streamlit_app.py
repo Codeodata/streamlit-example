@@ -38,11 +38,12 @@ with col1:
     ' Participante 1 👨',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
 )
-    
+
 with col2:
-    lottie_url="https://assets8.lottiefiles.com/packages/lf20_f8arnpdn.json"
-    st_lottie_animation = load_lottieurl(lottie_url)
-    st_lottie(st_lottie_animation)
+    option2 = st.selectbox(
+    ' Participante 2:',
+    ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
+    )
 
 with col3:
     option4 = st.selectbox(
@@ -68,6 +69,12 @@ with col1:
     st.subheader('Comentarios  del  -  Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
+
+# Imagen    
+with col2:
+    lottie_url="https://assets8.lottiefiles.com/packages/lf20_f8arnpdn.json"
+    st_lottie_animation = load_lottieurl(lottie_url)
+    st_lottie(st_lottie_animation)
     
 # Comentarios Actividad
 with col3:
