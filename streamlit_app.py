@@ -186,11 +186,11 @@ if archivo_cdt:
     with col4:
         #Tarjeta de Total de Casos
         st.metric(label="Total de Casos", value=num_filas)
-    with col5:
+    #with col5:
         # Crear el gráfico de anillos con plotly
-        fig = px.pie(df, values=num_filas, names='Estado', hole=0.5)
+      #  fig = px.pie(df, values=num_filas, names='Estado', hole=0.5)
         # Mostrar el gráfico en Streamlit
-        st.plotly_chart(fig)
+      #  st.plotly_chart(fig)
         
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
