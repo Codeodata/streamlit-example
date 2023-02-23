@@ -75,10 +75,10 @@ with col2:
     lottie_url="https://assets8.lottiefiles.com/packages/lf20_f8arnpdn.json"
     st_lottie_animation = load_lottieurl(lottie_url)
     st_lottie(st_lottie_animation)
-    st_lottie(height=300,
-             speed=0.9,
+    st_lottie(speed=0.9,
              loop=True,
-             widht=300)
+             height=200,
+             widht=200)
     
 # Comentarios Actividad
 with col3:
