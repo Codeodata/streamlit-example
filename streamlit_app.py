@@ -34,7 +34,7 @@ st.title( "Cambio de Turno - Service Desk ⏱️")
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Dividir la pantalla en dos columnas
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(3)
 
 # Mostrar los participantes
 with col1:
@@ -56,7 +56,6 @@ with col3:
     ' Participante 3 👨‍🦰',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
     )
-
 
 
 # Comentarios    
