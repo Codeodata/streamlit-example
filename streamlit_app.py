@@ -171,9 +171,18 @@ if archivo_cdt:
     num_filas = df.shape[0]
     #Tarjeta de Total de Casos
     st.metric(label="Total de Casos", value=num_filas)
-    #Tarjeta de casos Asignados:
-    asignado = (df['Estado'] == 'Asignado').sum()
-    st.metric(label="Casos Asignados",value=asignado)
+    with col1:
+        #Tarjeta de casos Asignados:
+        asignado = (df['Estado'] == 'Asignado').sum()
+        st.metric(label="Casos Asignados",value=asignado)
+    with col2: 
+        #Tarjeta de casos Cerrados:
+        cerrado = (df['Estado'] == 'Closed').sum()
+        st.metric(label="Casos Cerrados",value=cerrado)
+    with col3:
+        #Tarjeta de casos en Investigacion:
+        investigacion = (df['Estado'] == 'En investigacion').sum()
+        st.metric(label="Casos en Investigación",value=investigación)
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     
