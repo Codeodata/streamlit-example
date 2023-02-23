@@ -191,7 +191,7 @@ if archivo_cdt:
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     
-    st.markdown(f'<div style="overflow-x: auto; width: 500px">{tabla_html}</div>', unsafe_allow_html=True)
+    t.markdown(f'<div style="overflow-x: auto;"><style>table {{ width: 100%; }} td, th {{ min-width: 100px; }}</style>{tabla_html}</div>', unsafe_allow_html=True)
 
     
     
