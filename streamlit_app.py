@@ -41,7 +41,7 @@ with col1:
 
 with col2:
     option2 = st.selectbox(
-    ' Participante 2:',
+    ' Participante 2 👩‍🦰',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Ginenez Rodrigo')
     )
 
@@ -58,17 +58,20 @@ def add_note():
     st.subheader(f"Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
+    st.write(f" {note3}")
 
     #if not acti_aup or acti_cenam or acti_ecuador:
     st.subheader(f"Comentarios de la Actividad:")
-    st.write(f" {note3}")
     st.write(f" {note4}")
+    st.write(f" {note5}")
+    st.write(f" {note6}")
 
 # Mostrar el campo de entrada de texto para agregar notas
 with col1:
     st.subheader('Comentarios  del  -  Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
+    note3 = st.text_input('', key='new_note3')
 
 # Imagen    
 with col2:
@@ -87,9 +90,10 @@ with col2:
 # Comentarios Actividad
 with col3:
     st.subheader('Comentarios de  - Actividad 🗓️')
-    note3 = st.text_input('', key='new_note3')
     note4 = st.text_input('', key='new_note4')
-
+    note5 = st.text_input('', key='new_note5')
+    note6 = st.text_input('', key='new_note6')
+    
 # Turnos
 option3 = st.sidebar.radio(
         'Horario ⌚',
