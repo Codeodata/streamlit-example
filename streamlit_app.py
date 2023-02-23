@@ -78,7 +78,7 @@ with col2:
     st.subheader('')
     st.write('')
     
-    lottie_url="https://assets8.lottiefiles.com/packages/lf20_f8arnpdn.json"
+    lottie_url="https://assets1.lottiefiles.com/packages/lf20_b9s3zxh8.json"
     st_lottie_animation = load_lottieurl(lottie_url)
     st_lottie(st_lottie_animation,
               speed=0.9,
