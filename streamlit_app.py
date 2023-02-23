@@ -40,10 +40,9 @@ with col1:
 )
     
 with col2:
-    lottie_url="https://assets5.lottiefiles.com/private_files/lf30_lps8ojuw.json"
+    lottie_url="https://assets8.lottiefiles.com/packages/lf20_f8arnpdn.json"
     st_lottie_animation = load_lottieurl(lottie_url)
     st_lottie(st_lottie_animation)
-
 
 with col3:
     option4 = st.selectbox(
@@ -97,8 +96,8 @@ st.subheader('')
 st.subheader('{}'.format(option3))
 st.subheader('')
 
-#Mostrar Participantes
-st.subheader(f"Participantes:  {option1} - {option2} - {option4}")
+# Mostrar Participantes
+st.subheader(f"Participantes: {option1} - {option2} - {option4}")
 st.subheader('')
 
 add_note()
