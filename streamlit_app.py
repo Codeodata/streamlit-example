@@ -30,7 +30,7 @@ st.title( "Cambio de Turno - Service Desk ⏱️")
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Dividir la pantalla en dos columnas
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 # Mostrar los participantes
 with col1:
@@ -72,7 +72,6 @@ with col1:
 
 # Imagen    
 with col2:
-    st.subheader('')
     st.subheader('')
     lottie_url="https://assets8.lottiefiles.com/packages/lf20_f8arnpdn.json"
     st_lottie_animation = load_lottieurl(lottie_url)
