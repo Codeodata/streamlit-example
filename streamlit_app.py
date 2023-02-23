@@ -101,7 +101,7 @@ option3 = st.sidebar.radio(
     )
 
 #Mostrar Imagen TN3
-image = Image.open('tn3.png')
+image = Image.open('tn3.jpg')
 st.image(image, caption='',use_column_width=False)
 
 # Obtener la fecha actual
