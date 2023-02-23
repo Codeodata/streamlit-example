@@ -30,7 +30,7 @@ st.title( "Cambio de Turno - Service Desk ⏱️")
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Dividir la pantalla en dos columnas
-col1, col2, col3,col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 # Mostrar los participantes
 with col1:
@@ -68,7 +68,7 @@ def add_note():
 
 # Mostrar el campo de entrada de texto para agregar notas
 with col1:
-    st.subheader('Comentarios  del  -  Turno 🗒️ ')
+    st.subheader('Comentarios  del Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
     note3 = st.text_input('', key='new_note3')
@@ -89,7 +89,7 @@ with col2:
     
 # Comentarios Actividad
 with col3:
-    st.subheader('Comentarios de  - Actividad 🗓️')
+    st.subheader('Comentarios de Actividad 🗓️')
     note4 = st.text_input('', key='new_note4')
     note5 = st.text_input('', key='new_note5')
     note6 = st.text_input('', key='new_note6')
