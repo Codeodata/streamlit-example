@@ -170,7 +170,7 @@ if archivo_cdt:
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         #Tarjeta de casos Asignados:
         asignado = (df['Estado'] == 'Asignado').sum()
@@ -184,8 +184,14 @@ if archivo_cdt:
         investigacion = (df['Estado'] == 'En investigacion').sum()
         st.metric(label="Casos en Investigación",value=investigacion)
     with col4:
-            #Tarjeta de Total de Casos
-            st.metric(label="Total de Casos", value=num_filas)
+        #Tarjeta de Total de Casos
+        st.metric(label="Total de Casos", value=num_filas)
+    with col5:
+        # Crear el gráfico de anillos con plotly
+        fig = px.pie(df, values='Estado', names='Estado', hole=0.5)
+        # Mostrar el gráfico en Streamlit
+        st.plotly_chart(fig)
+        
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     
