@@ -190,8 +190,38 @@ if archivo_cdt:
         
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
-    
-    t.markdown(f'<div style="overflow-x: auto;"><style>table {{ width: 100%; }} td, th {{ min-width: 100px; }}</style>{tabla_html}</div>', unsafe_allow_html=True)
 
+    
+    # Convertir el DataFrame a una tabla HTML
+    tabla_html = df.to_html(index=False)
+
+    # Agregar estilo CSS para la tabla
+    estilo = """
+    <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #4287f5;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    </style>
+    """
+
+    # Agregar la tabla HTML al elemento Text en Streamlit
+    t = st.empty()
+    t.markdown(estilo + tabla_html, unsafe_allow_html=True)
     
     
