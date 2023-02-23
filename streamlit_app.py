@@ -70,26 +70,11 @@ with col1:
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
     
-
+# Comentarios Actividad
 with col3:
     st.subheader('Comentarios de  - Actividad 🗓️')
     note3 = st.text_input('', key='new_note3')
     note4 = st.text_input('', key='new_note4')
-
-
-# Imagen monitoreo
-with col2:
-    st_lottie(
-        lottie_coding,
-        speed=1,
-        reverse=False,
-        loop=True,
-        quality="low",
-        height=300,
-        width=300,
-        key=None
-    )
-
 
 # Turnos
 option3 = st.sidebar.radio(
