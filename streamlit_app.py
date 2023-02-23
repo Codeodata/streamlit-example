@@ -169,6 +169,12 @@ if acti_ecuador:
 if archivo_cdt:
     st.subheader('')
     df = pd.read_csv(archivo_cdt, engine='python')
+
+    num_filas = df.shape[0]
+    st.metric(label="Casos asignados durante el turno", value=num_filas)
+    
     # Convertir el DataFrame a una tabla HTML
+    st.subheader("Casos ")
     tabla_html = df.to_html(index=False)
     st.write(tabla_html, unsafe_allow_html=True)
+    
