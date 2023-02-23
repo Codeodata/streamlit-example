@@ -76,7 +76,7 @@ with col1:
 
 # Imagen    
 with col2:
-    st_lottie_animation = load_lottie("/streamlit-example/coding.json")
+    st_lottie_animation = load_lottie("coding.json")
     st_lottie(st_lottie_animation,
               speed=0.9,
               reverse=False,
