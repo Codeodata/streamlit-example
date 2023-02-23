@@ -169,9 +169,8 @@ if archivo_cdt:
     st.subheader('')
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
-    #Tarjeta de Total de Casos
-    st.metric(label="Total de Casos", value=num_filas)
-    col1, col2, col3 = st.columns(3)
+
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         #Tarjeta de casos Asignados:
         asignado = (df['Estado'] == 'Asignado').sum()
@@ -184,6 +183,9 @@ if archivo_cdt:
         #Tarjeta de casos en Investigacion:
         investigacion = (df['Estado'] == 'En investigacion').sum()
         st.metric(label="Casos en Investigación",value=investigacion)
+    with col4:
+            #Tarjeta de Total de Casos
+            st.metric(label="Total de Casos", value=num_filas)
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     
