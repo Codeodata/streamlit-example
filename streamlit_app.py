@@ -169,9 +169,16 @@ if archivo_cdt:
     st.subheader('')
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
+    #Tarjeta de Total de Casos
     st.metric(label="Total de Casos", value=num_filas)
+    #Tarjeta de casos Asignados:
+    asignado = (df['Estado'] == 'Asignado').sum()
+    st.metric(label="Casos Asignados",value=asignado)
     # Convertir el DataFrame a una tabla HTML
-    st.subheader("Casos asignados durante el turno ")
     tabla_html = df.to_html(index=False)
+    
+    
+    st.subheader("Casos asignados durante el turno ")
     st.write(tabla_html, unsafe_allow_html=True)
+    
     
