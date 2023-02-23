@@ -102,7 +102,7 @@ option3 = st.sidebar.radio(
     )
 
 #Mostrar Imagen TN3
-image = Image.open('tecnotree.jpg')
+image = Image.open('tn3.png')
 st.image(image, caption='',use_column_width=False)
 
 # Obtener la fecha actual
