@@ -171,6 +171,7 @@ if archivo_cdt:
     num_filas = df.shape[0]
     #Tarjeta de Total de Casos
     st.metric(label="Total de Casos", value=num_filas)
+    col1, col2, col3 = st.columns(3)
     with col1:
         #Tarjeta de casos Asignados:
         asignado = (df['Estado'] == 'Asignado').sum()
