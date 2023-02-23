@@ -77,8 +77,8 @@ with col2:
     st_lottie(st_lottie_animation)
     st_lottie(speed=0.9,
              loop=True,
-             height=200,
-             widht=200)
+             height=100,
+             )
     
 # Comentarios Actividad
 with col3:
