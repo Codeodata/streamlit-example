@@ -80,8 +80,8 @@ with col2:
               reverse=False,
               loop=True,
               quality="low",
-              height=None,
-              width=None,
+              height=300,
+              width=200,
               key=None)   
     
 # Comentarios Actividad
