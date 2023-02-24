@@ -10,12 +10,12 @@ from datetime import datetime
 from streamlit_lottie import st_lottie 
 
 st.set_page_config(layout="wide", page_title="CDT")
-
+#para importar imagen desde el archivo
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
 
-
+#para importar imagen con url
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
@@ -76,6 +76,7 @@ with col1:
 
 # Imagen    
 with col2:
+    st.subheader('')
     st_lottie_animation = load_lottiefile("coding.json")
     st_lottie(st_lottie_animation,
               speed=0.9,
