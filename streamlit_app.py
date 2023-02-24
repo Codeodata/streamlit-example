@@ -72,7 +72,7 @@ with col1:
     st.subheader('Comentarios  del Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
-    note3 = st.text_input('', key='new_note3')
+ #  note3 = st.text_input('', key='new_note3')
 
 # Imagen    
 with col2:
@@ -105,7 +105,7 @@ with col3:
     st.subheader('Comentarios de Actividad 🗓️')
     note4 = st.text_input('', key='new_note4')
     note5 = st.text_input('', key='new_note5')
-    note6 = st.text_input('', key='new_note6')
+   #note6 = st.text_input('', key='new_note6')
     
 # Turnos
 option3 = st.sidebar.radio(
