@@ -76,6 +76,7 @@ with col1:
 
 # Imagen    
 with col2:
+    st.subheader('-')
     st_lottie_animation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_m9zragkd.json")
     st_lottie(st_lottie_animation2,
               speed=0.9,
