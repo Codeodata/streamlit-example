@@ -90,7 +90,7 @@ with col2:
               height=None,
               width=None,
               key=None) 
-    st.subheader('-----------------------------------------------')
+  #  st.subheader('-----------------------------------------------')
 # Imagen    
 #with col2:
 #   st_lottie_animation = load_lottiefile("coding.json")
