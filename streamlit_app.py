@@ -110,7 +110,7 @@ with col3:
 # Turnos
 option3 = st.sidebar.radio(
         'Horario ⌚',
-        ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 to 00:00','Turno Noche - 00:00 to 08:00')
+        ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 a 00:00','Turno Noche - 00:00 a 08:00')
     )
 
 #Mostrar Imagen TN3
@@ -151,6 +151,7 @@ if acti_cenam:
 
     st.subheader(f'Actividad CENAM: {encargado} ')
     st.subheader(f'Comienza a las {horario}hs')
+    st.subheader('-')
     #st.subheader(f'{note3}')
 #    st.subheader(f'{note4}')
 #    st.subheader(f'{note5}')
@@ -164,6 +165,7 @@ if acti_aup:
 
     st.subheader(f'Actividad AUP: {encargado2} ')
     st.subheader(f'Comienza a las {horario2}hs')
+    st.subheader('-')
 
 if acti_ecuador:
     with col1:
@@ -175,11 +177,11 @@ if acti_ecuador:
     
     st.subheader(f'Actividad ECUADOR: {encargado3}')
     st.subheader(f'Comienza a las {horario3}hs')
-    st.subheader('')
+    st.subheader('-')
 
 # Leer el excel
 if archivo_cdt:
-    st.subheader('')
+    st.subheader('-')
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
     #Tarjeta de casos Asignados:
