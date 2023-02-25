@@ -182,8 +182,6 @@ if archivo_cdt:
     st.subheader('')
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
-
-    col1, col2, col3, col4 = st.columns(4)
     #Tarjeta de casos Asignados:
     asignado = (df['Estado'] == 'Asignado').sum()
     st.subheader(f'Casos en Asignados:{asignado})
