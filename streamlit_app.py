@@ -152,8 +152,8 @@ if acti_cenam:
     st.subheader(f'Actividad CENAM: {encargado} ')
     st.subheader(f'Comienza a las {horario}hs')
     #st.subheader(f'{note3}')
-    st.subheader(f'{note4}')
-    st.subheader(f'{note5}')
+#    st.subheader(f'{note4}')
+#    st.subheader(f'{note5}')
 if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
