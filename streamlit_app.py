@@ -55,14 +55,14 @@ with col3:
 # Comentarios    
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
-    st.subheader(f"Comentarios del Turno:")
+    st.subheader(f"🗒️Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
  #   st.subheader('-')
  #  st.write(f" {note3}")
 
     #if not acti_aup or acti_cenam or acti_ecuador:
-    st.subheader(f"Comentarios de la Actividad:")
+    st.subheader(f"🗓️Comentarios de la Actividad:")
     st.write(f" {note4}")
     st.write(f" {note5}")
   #  st.subheader('-')
@@ -90,6 +90,7 @@ with col2:
               height=None,
               width=None,
               key=None) 
+    st.subheader('-------------------------------------------------')
 # Imagen    
 #with col2:
 #   st_lottie_animation = load_lottiefile("coding.json")
@@ -124,13 +125,10 @@ today = datetime.today().strftime('%Y-%m-%d')
 
 # Mostrar la fecha actual en Streamlit
 st.title(f'Service Desk - Cambio de Turno - {today} - {option3}')
-st.subheader('')
-
-
 
 # Mostrar Participantes
-st.subheader(f"Participantes: {option1} - {option2} - {option4}")
-st.subheader('-')
+st.subheader(f"🧑‍💻Participantes: {option1} - {option2} - {option4}")
+# st.subheader(' ')
 
 add_note()
 
@@ -195,7 +193,7 @@ if archivo_cdt:
     st.subheader(f'Casos en Investigación: {investigacion}')
     #Tarjeta de Total de Casos
     st.subheader(f'Total de Casos: {num_filas}')
-    
+    st.subheader(' ')
         
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
