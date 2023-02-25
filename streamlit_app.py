@@ -150,7 +150,7 @@ if acti_cenam:
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader(f'*Actividad CENAM: {encargado} ')
-    st.subheader(f'Comienza a las {horario}hs'
+    st.subheader(f'Comienza a las {horario}hs')
     #    st.subheader(f'{note3}')
     #    st.subheader(f'{note4}')
     #    st.subheader(f'{note5}')
