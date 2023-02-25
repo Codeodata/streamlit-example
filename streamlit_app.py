@@ -108,11 +108,11 @@ with col3:
     note4 = st.text_input('', key='new_note4')
     note5 = st.text_input('', key='new_note5')
    #note6 = st.text_input('', key='new_note6')
-    st.subheader('-')
+    
 # Turnos
 option3 = st.sidebar.radio(
         'Horario ⌚',
-        ('','Turno Mañana - 8:00 a 16:00','Turno Tarde - 16:00 a 00:00','Turno Noche - 00:00 a 08:00')
+        ('','8:00 a 16:00','16:00 a 00:00','00:00 a 08:00')
     )
 
 #Mostrar Imagen TN3
@@ -149,7 +149,7 @@ if acti_cenam:
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'*Actividad CENAM: {encargado} ')
+    st.subheader(f'➡️Actividad CENAM: {encargado} ')
     st.subheader(f'Comienza a las {horario}hs')
     #    st.subheader(f'{note3}')
     #    st.subheader(f'{note4}')
@@ -163,7 +163,7 @@ if acti_aup:
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'-Actividad AUP: {encargado2} ')
+    st.subheader(f'-➡️Actividad AUP: {encargado2} ')
     st.subheader(f'Comienza a las {horario2}hs')
     st.subheader('-')
 
@@ -175,7 +175,7 @@ if acti_ecuador:
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
-    st.subheader(f'*Actividad ECUADOR: {encargado3}')
+    st.subheader(f'➡️Actividad ECUADOR: {encargado3}')
     st.subheader(f'Comienza a las {horario3}hs')
     st.subheader('-')
 
