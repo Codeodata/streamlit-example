@@ -179,9 +179,10 @@ if acti_ecuador:
     st.subheader(f'Comienza a las {horario3}hs')
     
 
+st.subheader('-')
+
 # Leer el excel
 if archivo_cdt:
-    st.subheader('-')
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
     #Tarjeta de casos Asignados:
