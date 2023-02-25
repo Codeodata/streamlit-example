@@ -150,7 +150,7 @@ if acti_cenam:
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader(f'Actividad CENAM: {encargado} ')
-    st.subheader(f'La actividad en CENAM comienza a las {horario}hs')
+    st.subheader(f'La actividad comienza a las {horario}hs')
     #st.subheader(f'{note3}')
     st.subheader(f'{note4}')
     st.subheader(f'{note5}')
@@ -163,7 +163,7 @@ if acti_aup:
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader(f'Actividad AUP: {encargado2} ')
-    st.subheader(f'La actividad en AUP comienza a las {horario2}hs')
+    st.subheader(f'La actividad comienza a las {horario2}hs')
 
 if acti_ecuador:
     with col1:
@@ -174,7 +174,7 @@ if acti_ecuador:
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
     st.subheader(f'Actividad ECUADOR: {encargado3}')
-    st.subheader(f'La actividad en ECUADOR comienza a las {horario3}hs')
+    st.subheader(f'La actividad comienza a las {horario3}hs')
     st.subheader('')
 
 # Leer el excel
