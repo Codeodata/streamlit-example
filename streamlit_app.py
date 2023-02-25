@@ -184,21 +184,17 @@ if archivo_cdt:
     num_filas = df.shape[0]
 
     col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        #Tarjeta de casos Asignados:
-        asignado = (df['Estado'] == 'Asignado').sum()
-        st.metric(label="Casos Asignados",value=asignado)
-    with col2: 
-        #Tarjeta de casos Cerrados:
-        cerrado = (df['Estado'] == 'Closed').sum()
-        st.metric(label="Casos Cerrados",value=cerrado)
-    with col3:
-        #Tarjeta de casos en Investigacion:
-        investigacion = (df['Estado'] == 'En investigacion').sum()
-        st.metric(label="Casos en Investigación",value=investigacion)
-    with col4:
-        #Tarjeta de Total de Casos
-        st.metric(label="Total de Casos", value=num_filas)
+    #Tarjeta de casos Asignados:
+    asignado = (df['Estado'] == 'Asignado').sum()
+    st.write(f'Casos en Asignados:{asignado})
+    #Tarjeta de casos Cerrados:
+    cerrado = (df['Estado'] == 'Closed').sum()
+    st.write(f'Casos Cerrados:{cerrado})
+    #Tarjeta de casos en Investigacion:
+    investigacion = (df['Estado'] == 'En investigacion').sum()
+    st.write(f'Casos en Investigación:{investigacion})
+    #Tarjeta de Total de Casos
+    st.write(f'Total de Casos:{num_filas})
     
         
     # Convertir el DataFrame a una tabla HTML
