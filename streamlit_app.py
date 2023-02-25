@@ -163,7 +163,7 @@ if acti_aup:
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'*Actividad AUP: {encargado2} ')
+    st.subheader(f'-Actividad AUP: {encargado2} ')
     st.subheader(f'Comienza a las {horario2}hs')
     st.subheader('-')
 
