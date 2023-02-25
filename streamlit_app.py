@@ -58,14 +58,14 @@ def add_note():
     st.subheader(f"Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
-    st.subheader('-')
+ #   st.subheader('-')
  #  st.write(f" {note3}")
 
     #if not acti_aup or acti_cenam or acti_ecuador:
     st.subheader(f"Comentarios de la Actividad:")
     st.write(f" {note4}")
     st.write(f" {note5}")
-    st.subheader('-')
+  #  st.subheader('-')
   #  st.write(f" {note6}")
 
 # Mostrar el campo de entrada de texto para agregar notas
@@ -130,7 +130,7 @@ st.subheader('')
 
 # Mostrar Participantes
 st.subheader(f"Participantes: {option1} - {option2} - {option4}")
-st.subheader('')
+st.subheader('-')
 
 add_note()
 
@@ -163,7 +163,7 @@ if acti_aup:
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'-➡️Actividad AUP: {encargado2} ')
+    st.subheader(f'➡️Actividad AUP: {encargado2} ')
     st.subheader(f'Comienza a las {horario2}hs')
     
 
