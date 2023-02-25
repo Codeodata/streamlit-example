@@ -58,12 +58,14 @@ def add_note():
     st.subheader(f"Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
+    st.subheader('-')
  #  st.write(f" {note3}")
 
     #if not acti_aup or acti_cenam or acti_ecuador:
     st.subheader(f"Comentarios de la Actividad:")
     st.write(f" {note4}")
     st.write(f" {note5}")
+    st.subheader('-')
   #  st.write(f" {note6}")
 
 # Mostrar el campo de entrada de texto para agregar notas
@@ -72,7 +74,7 @@ with col1:
     st.subheader('Comentarios  del Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
-    st.subheader('-') 
+     
 #  note3 = st.text_input('', key='new_note3')
 
 # Imagen    
