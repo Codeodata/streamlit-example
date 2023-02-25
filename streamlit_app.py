@@ -123,12 +123,10 @@ st.image(image, caption='',use_column_width=False)
 today = datetime.today().strftime('%Y-%m-%d')
 
 # Mostrar la fecha actual en Streamlit
-st.title('Service Desk - Cambio de Turno - {}'.format(today) )
+st.title(f'Service Desk - Cambio de Turno - {today} - {option3}')
 st.subheader('')
 
-# Mostrar Turnos del Equipo
-st.subheader('{}'.format(option3))
-st.subheader('')
+
 
 # Mostrar Participantes
 st.subheader(f"Participantes: {option1} - {option2} - {option4}")
@@ -151,10 +149,9 @@ if acti_cenam:
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'Actividad CENAM: {encargado} ')
-    st.subheader(f'Comienza a las {horario}hs')
-    st.subheader('-')
-    #st.subheader(f'{note3}')
+    st.subheader(f'*Actividad CENAM: {encargado} ')
+    st.subheader(f'Comienza a las {horario}hs'
+#st.subheader(f'{note3}')
 #    st.subheader(f'{note4}')
 #    st.subheader(f'{note5}')
 if acti_aup:
@@ -165,7 +162,7 @@ if acti_aup:
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'Actividad AUP: {encargado2} ')
+    st.subheader(f'*Actividad AUP: {encargado2} ')
     st.subheader(f'Comienza a las {horario2}hs')
     st.subheader('-')
 
@@ -177,7 +174,7 @@ if acti_ecuador:
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
-    st.subheader(f'Actividad ECUADOR: {encargado3}')
+    st.subheader(f'*Actividad ECUADOR: {encargado3}')
     st.subheader(f'Comienza a las {horario3}hs')
     st.subheader('-')
 
