@@ -165,7 +165,7 @@ if acti_aup:
 
     st.subheader(f'-➡️Actividad AUP: {encargado2} ')
     st.subheader(f'Comienza a las {horario2}hs')
-    st.subheader('-')
+    
 
 if acti_ecuador:
     with col1:
@@ -177,7 +177,7 @@ if acti_ecuador:
     
     st.subheader(f'➡️Actividad ECUADOR: {encargado3}')
     st.subheader(f'Comienza a las {horario3}hs')
-    st.subheader('-')
+    
 
 # Leer el excel
 if archivo_cdt:
