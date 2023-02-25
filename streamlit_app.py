@@ -90,7 +90,7 @@ with col2:
               height=None,
               width=None,
               key=None) 
-    st.subheader('-------------------------------------------------')
+    st.subheader('-----------------------------------------------')
 # Imagen    
 #with col2:
 #   st_lottie_animation = load_lottiefile("coding.json")
@@ -117,6 +117,9 @@ option3 = st.sidebar.radio(
     )
 
 #Mostrar Imagen TN3
+
+st.subheader('-----------------------------------------------')
+st.subheader('-----------------------------------------------')
 image = Image.open('tn3.jpg')
 st.image(image, caption='',use_column_width=False)
 
