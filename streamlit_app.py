@@ -184,15 +184,15 @@ if archivo_cdt:
     num_filas = df.shape[0]
     #Tarjeta de casos Asignados:
     asignado = (df['Estado'] == 'Asignado').sum()
-    st.subheader(f'Casos en Asignados:{asignado})
+    st.subheader(f'Casos en Asignados: {asignado})
     #Tarjeta de casos Cerrados:
     cerrado = (df['Estado'] == 'Closed').sum()
-    st.subheader(f'Casos Cerrados:{cerrado})
+    st.subheader(f'Casos Cerrados: {cerrado})
     #Tarjeta de casos en Investigacion:
     investigacion = (df['Estado'] == 'En investigacion').sum()
-    st.subheader(f'Casos en Investigación:{investigacion})
+    st.subheader(f'Casos en Investigación: {investigacion})
     #Tarjeta de Total de Casos
-    st.subheader(f'Total de Casos:{num_filas})
+    st.subheader(f'Total de Casos: {num_filas})
     
         
     # Convertir el DataFrame a una tabla HTML
