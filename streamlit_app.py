@@ -123,14 +123,15 @@ image = Image.open('tn3.jpg')
 st.image(image, caption='',use_column_width=False)
 
 # Obtener la fecha actual
-today = datetime.today().strftime('%Y-%m-%d')
+today = datetime.today().strftime('%d/%m/%Y')
 
 # Mostrar la fecha actual en Streamlit
 st.title(f'Service Desk - Cambio de Turno - {today} - {option3}')
 
 # Mostrar Participantes
+st.subheader('-')
 st.subheader(f"🧑‍💻Participantes: {option1} - {option2} - {option4}")
-# st.subheader(' ')
+
 
 add_note()
 
