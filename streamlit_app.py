@@ -55,7 +55,7 @@ with col3:
 # Comentarios    
 def add_note():
     # Aquí puedes agregar el código para guardar la nota en una base de datos.
-    st.subheader('-')
+ #   st.subheader('-')
     st.subheader(f"🗒️Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
@@ -127,7 +127,7 @@ today = datetime.today().strftime('%d/%m/%y')
 st.title(f'Service Desk - Cambio de Turno - {today} - {option3}')
 
 # Mostrar Participantes
-st.subheader('-')
+# st.subheader('-')
 st.subheader(f"🧑‍💻Participantes: {option1} - {option2} - {option4}")
 
 
