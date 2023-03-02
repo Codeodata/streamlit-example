@@ -97,9 +97,9 @@ with col2:
     st_lottie(st_lottie_animation,
               speed=0.9,
               reverse=False,
-             loop=True,
-             quality="low",
-             height=None,
+              loop=True,
+              quality="low",
+              height=None,
               width=None,
               key=None)   
     
