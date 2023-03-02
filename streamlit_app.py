@@ -78,30 +78,30 @@ with col1:
 #  note3 = st.text_input('', key='new_note3')
 
 # Imagen    
+#with col2:
+ #   st.subheader('')
+ #   st.subheader('')
+ #   st_lottie_animation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_m9zragkd.json")
+ #   st_lottie(st_lottie_animation2,
+ #             speed=0.9,
+ #             reverse=False,
+ #             loop=True,
+ #             quality="low",
+ #             height=None,
+ #             width=None,
+ #             key=None) 
+  #  st.subheader('-----------------------------------------------')
+ Imagen    
 with col2:
-    st.subheader('')
-    st.subheader('')
-    st_lottie_animation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_m9zragkd.json")
-    st_lottie(st_lottie_animation2,
+   st_lottie_animation = load_lottiefile("coding.json")
+    st_lottie(st_lottie_animation,
               speed=0.9,
               reverse=False,
-              loop=True,
-              quality="low",
-              height=None,
+             loop=True,
+             quality="low",
+             height=None,
               width=None,
-              key=None) 
-  #  st.subheader('-----------------------------------------------')
-# Imagen    
-#with col2:
-#   st_lottie_animation = load_lottiefile("coding.json")
-#    st_lottie(st_lottie_animation,
-#              speed=0.9,
-#              reverse=False,
-#              loop=True,
-#              quality="low",
-#              height=None,
-#              width=None,
-#              key=None)   
+              key=None)   
     
 # Comentarios Actividad
 with col3:
