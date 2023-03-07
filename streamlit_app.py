@@ -190,17 +190,18 @@ if archivo_cdt:
     df = pd.read_csv(archivo_cdt, engine='python')
     num_filas = df.shape[0]
     #Tarjeta de casos Asignados:
-    asignado = (df['Estado'] == 'Asignado').sum()
-    st.subheader(f'Casos en Asignados: {asignado}')
+    #asignado = (df['Estado'] == 'Asignado').sum()
+    #st.subheader(f'Casos en Asignados: {asignado}')
     #Tarjeta de casos Cerrados:
-    cerrado = (df['Estado'] == 'Closed').sum()
-    st.subheader(f'Casos Solucionados: {cerrado}')
+    #cerrado = (df['Estado'] == 'Closed').sum()
+    #st.subheader(f'Casos Solucionados: {cerrado}')
     #Tarjeta de casos en Investigacion:
-    investigacion = (df['Estado'] == 'En investigacion').sum()
-    st.subheader(f'Casos en Investigación: {investigacion}')
+    #investigacion = (df['Estado'] == 'En investigacion').sum()
+    #st.subheader(f'Casos en Investigación: {investigacion}')
     #Tarjeta de Total de Casos
-    st.subheader(f'Total de Casos: {num_filas}')
-    st.subheader('-')
+    #st.subheader(f'Total de Casos: {num_filas}')
+    
+    #st.subheader('-')
         
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
