@@ -70,7 +70,7 @@ def add_note():
  #   st.subheader('-')
  #  st.write(f" {note3}")
 
-    #if not acti_aup or acti_cenam or acti_ecuador:
+if not acti_aup or acti_cenam or acti_ecuador:
     st.subheader(f"🗓️Comentarios de la Actividad:")
     st.write(f" {note4}")
     st.write(f" {note5}")
@@ -110,11 +110,11 @@ with col2:
  #             key=None)   
     
 # Comentarios Actividad
-if acti_cenam or acti_aup or acti_ecuador:
-    with col3:
-        st.subheader('Comentarios de Actividad 🗓️')
-        note4 = st.text_input('', key='new_note4')
-        note5 = st.text_input('', key='new_note5')
+#if acti_cenam or acti_aup or acti_ecuador:
+ #  with col3:
+   #     st.subheader('Comentarios de Actividad 🗓️')
+   #     note4 = st.text_input('', key='new_note4')
+   #     note5 = st.text_input('', key='new_note5')
        #note6 = st.text_input('', key='new_note6')
     
 # Turnos
