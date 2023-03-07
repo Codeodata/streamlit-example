@@ -26,8 +26,7 @@ def load_lottieurl(url: str):
 st.title( "Cambio de Turno - Service Desk ⏱️")
 
 
-#Lector de Archivo Excel
-archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
+
 
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
@@ -50,7 +49,16 @@ with col3:
     ' Participante 3 🧑‍💻',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
     )
-
+    
+if option1 and option2 and not option4:
+    #Lector de Archivo Excel
+    archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
+elif option1 and option4 and not option2:
+    #Lector de Archivo Excel
+    archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
+elif option2 and option4 and not option1:
+    #Lector de Archivo Excel
+    archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Comentarios    
 def add_note():
