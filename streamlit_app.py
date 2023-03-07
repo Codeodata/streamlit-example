@@ -110,11 +110,12 @@ with col2:
  #             key=None)   
     
 # Comentarios Actividad
-with col3:
-    st.subheader('Comentarios de Actividad 🗓️')
-    note4 = st.text_input('', key='new_note4')
-    note5 = st.text_input('', key='new_note5')
-   #note6 = st.text_input('', key='new_note6')
+if acti_cenam or acti_aup or acti_ecuador:
+    with col3:
+        st.subheader('Comentarios de Actividad 🗓️')
+        note4 = st.text_input('', key='new_note4')
+        note5 = st.text_input('', key='new_note5')
+       #note6 = st.text_input('', key='new_note6')
     
 # Turnos
 option3 = st.sidebar.radio(
