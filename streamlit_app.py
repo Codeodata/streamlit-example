@@ -78,15 +78,16 @@ def add_note():
   #  st.write(f" {note6}")
 
 # Mostrar el campo de entrada de texto para agregar notas
-with col1:
+with col2:
     st.subheader('Comentarios  del Turno 🗒️ ')
     note = st.text_input('', key='new_note')
     note2 = st.text_input('', key='new_note2')
-     
-#  note3 = st.text_input('', key='new_note3')
-
+with col3:   
+    note3 = st.text_input('', key='new_note3')
+    note4 = st.text_input('', key='new_note3')
+  
 # Imagen    
-with col3:
+with col1:
     st_lottie_animation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_m9zragkd.json")
     st_lottie(st_lottie_animation2,
               speed=0.9,
