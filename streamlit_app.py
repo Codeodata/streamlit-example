@@ -70,10 +70,10 @@ def add_note():
  #   st.subheader('-')
  #  st.write(f" {note3}")
 
-if not acti_aup or acti_cenam or acti_ecuador:
-    st.subheader(f"🗓️Comentarios de la Actividad:")
-    st.write(f" {note4}")
-    st.write(f" {note5}")
+#if not acti_aup or acti_cenam or acti_ecuador:
+ #   st.subheader(f"🗓️Comentarios de la Actividad:")
+ #   st.write(f" {note4}")
+  #  st.write(f" {note5}")
   #  st.subheader('-')
   #  st.write(f" {note6}")
 
