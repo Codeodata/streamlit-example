@@ -84,7 +84,7 @@ with col2:
     note2 = st.text_input('', key='new_note2')
 with col3:   
     note3 = st.text_input('', key='new_note3')
-    note4 = st.text_input('', key='new_note3')
+    note4 = st.text_input('', key='new_note4')
   
 # Imagen    
 with col1:
