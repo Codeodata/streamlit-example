@@ -194,7 +194,6 @@ if archivo_cdt:
     #Tarjeta de Total de Casos
     #st.subheader(f'Total de Casos: {num_filas}')
     
-    #st.subheader('-')
         
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
