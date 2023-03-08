@@ -118,8 +118,8 @@ option3 = st.sidebar.radio(
         )
 
 #Mostrar Imagen TN3
-#st.subheader('-')
-#st.subheader('-')
+st.subheader('-')
+st.subheader('-')
 image = Image.open('tn3.jpg')
 st.image(image, caption='',use_column_width=False)
 
