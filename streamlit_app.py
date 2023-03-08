@@ -118,8 +118,8 @@ option3 = st.sidebar.radio(
         )
 
 #Mostrar Imagen TN3
-st.subheader('-')
-st.subheader('-')
+#st.subheader('-')
+#st.subheader('-')
 image = Image.open('tn3.jpg')
 st.image(image, caption='',use_column_width=False)
 
@@ -147,7 +147,7 @@ if acti_cenam:
     with col1:
         encargado = st.sidebar.selectbox(
         'Encargado:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
+        ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -157,7 +157,7 @@ if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
         'Encargado 2:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
+        ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -168,7 +168,7 @@ if acti_ecuador:
     with col1:
         encargado3 = st.sidebar.selectbox(
         'Encargado 3:',
-        ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
+        ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
