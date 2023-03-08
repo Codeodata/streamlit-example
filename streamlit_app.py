@@ -25,7 +25,6 @@ def load_lottieurl(url: str):
 
 st.title( "Cambio de Turno - Service Desk ⏱️")
 
-
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
 
@@ -53,7 +52,7 @@ archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Comentarios    
 def add_note():
-    # Aquí puedes agregar el código para guardar la nota en una base de datos.
+ # Aquí puedes agregar el código para guardar la nota en una base de datos.
  #   st.subheader('-')
     st.subheader(f"🗒️Comentarios del Turno:")
     st.write(f" {note}")
@@ -73,12 +72,12 @@ def add_note():
 # Mostrar el campo de entrada de texto para agregar notas
 with col2:
     st.subheader('Comentarios  del Turno ')
-    note = st.text_input('', key='new_note')
-    note2 = st.text_input('', key='new_note2')
+    note = st.text_input('Comentario 1', key='new_note')
+    note2 = st.text_input('Comentario 2', key='new_note2')
 with col3: 
     st.subheader('✏️🗒️ ')
-    note3 = st.text_input('', key='new_note3')
-    note4 = st.text_input('', key='new_note4')
+    note3 = st.text_input('Comentario 3', key='new_note3')
+    note4 = st.text_input('Comentario 4', key='new_note4')
   
 # Imagen    
 with col1:
