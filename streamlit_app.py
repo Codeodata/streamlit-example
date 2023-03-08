@@ -26,8 +26,6 @@ def load_lottieurl(url: str):
 st.title( "Cambio de Turno - Service Desk ⏱️")
 
 
-
-
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
 
@@ -50,15 +48,8 @@ with col3:
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
     )
     
-if option1 and option2 and not option4:
-    #Lector de Archivo Excel
-    archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
-elif option1 and option4 and not option2:
-    #Lector de Archivo Excel
-    archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
-elif option2 and option4 and not option1:
-    #Lector de Archivo Excel
-    archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
+#Lector de Archivo Excel
+archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Comentarios    
 def add_note():
@@ -67,6 +58,8 @@ def add_note():
     st.subheader(f"🗒️Comentarios del Turno:")
     st.write(f" {note}")
     st.write(f" {note2}")
+    st.write(f" {note3}")
+    st.write(f" {note4}")    
  #   st.subheader('-')
  #  st.write(f" {note3}")
 
