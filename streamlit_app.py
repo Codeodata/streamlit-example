@@ -23,8 +23,7 @@ def load_lottieurl(url: str):
 
     return r.json()
 
-st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk ⏱️</h1>", unsafe_allow_html=True)
-st.title( "Cambio de Turno - Service Desk ⏱️")
+st.write("<h1 style='font-size:60px'>Cambio de Turno-Service Desk⏱️</h1>", unsafe_allow_html=True)
 
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
