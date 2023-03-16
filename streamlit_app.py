@@ -180,7 +180,7 @@ st.subheader('-')
 # Leer el excel
 if archivo_cdt:
     df = pd.read_csv(archivo_cdt, engine='python')
-    #num_filas = df.shape[0]
+    num_filas = df.shape[0]
     #Tarjeta de casos Asignados:
     #asignado = (df['Estado'] == 'Asignado').sum()
     #st.subheader(f'Casos en Asignados: {asignado}')
