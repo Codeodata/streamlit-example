@@ -191,7 +191,7 @@ if archivo_cdt:
     #investigacion = (df['Estado'] == 'En investigacion').sum()
     #st.subheader(f'Casos en Investigación: {investigacion}')
     #Tarjeta de Total de Casos
-    #st.subheader(f'Total de Casos: {num_filas}')    
+    st.subheader(f'Total de Casos: {num_filas}')    
     # Convertir el DataFrame a una tabla HTML
     tabla_html = df.to_html(index=False)
     st.write(tabla_html, unsafe_allow_html=True)
