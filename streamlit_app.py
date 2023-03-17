@@ -79,6 +79,8 @@ def add_note():
     st.write(f" {note2}")
     st.write(f" {note3}")
     st.write(f" {note4}")  
+    st.write(f" {note5}")
+    st.write(f" {note6}")
     
  #   st.subheader('-')
  #  st.write(f" {note3}")
@@ -105,10 +107,12 @@ with col2:
     st.subheader('Comentarios  del Turno  ')
     note = st.text_input('Comentario 1', key='new_note')
     note2 = st.text_input('Comentario 2', key='new_note2')
+    note3 = st.text_input('Comentario 3', key='new_note3')
 with col3:
     st.subheader('✏️🗒️')
-    note3 = st.text_input('Comentario 3', key='new_note3')
     note4 = st.text_input('Comentario 4', key='new_note4')
+    note5 = st.text_input('Comentario 5', key='new_note5')
+    note6 = st.text_input('Comentario 6', key='new_note6')
   
 
   #  st.subheader('-----------------------------------------------')
