@@ -20,7 +20,6 @@ def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
         return None
-
     return r.json()
 
 st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsafe_allow_html=True)
@@ -29,7 +28,6 @@ st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsaf
 col1, col2, col3 = st.columns(3)
 
 # SIDEBAR
-
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
@@ -57,7 +55,7 @@ with col1:
     option1 = st.selectbox(
     ' Participante 1 🧑‍💻',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
-)
+    )
 
 with col2:
     option2 = st.selectbox(
