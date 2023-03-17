@@ -35,12 +35,13 @@ archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
 st.sidebar.radio('Seleccione su Turno⌚', options=['Turno Mañana', 'Turno Tarde','Turno Noche']) 
 
-if options == ['Turno Mañana']:
+if options == 'Turno Mañana':
     horario = '8:00 a 16:00hs'
-if options=='Turno Tarde':
+elif options == 'Turno Tarde':
     horario = '16:00 a 00:00hs'
-if options == 'Turno Noche':
+elif options == 'Turno Noche':
     horario = '00:00 a 8:00hs'
+    
 # Actividades
 st.sidebar.subheader('Actividades Service Desk 💻')
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
