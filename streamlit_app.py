@@ -33,12 +33,14 @@ col1, col2, col3 = st.columns(3)
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
-checkbox_state = st.sidebar.checkbox('Selecciona esta un horario⌚', value=False)
-if checkbox_state:
- turno_m = st.sidebar.checkbox('Turno Mañana', value=False, key=1)
- turno_t = st.sidebar.checkbox('Turno Tarde', value=False, key=2)
- turno_n = st.sidebar.checkbox('Turno Noche', value=False, key=3)
-
+st.sidebar.radio('Selecciona esta un horario⌚')
+st.radio('Seleccione una opción:', options=['Turno Mañana', 'Turno Tarde','Turno Noche'], index=0) 
+if options = 'Turno Mañana':
+    horario = '8:00 a 16:00hs'
+if options='Turno Tarde':
+    horario = '16:00 a 00:00hs'
+if options = 'Turno Noche':
+    horario = '00:00 a 8:00hs'
 # Actividades
 st.sidebar.subheader('Actividades Service Desk 💻')
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
