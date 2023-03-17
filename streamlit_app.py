@@ -33,9 +33,9 @@ col1, col2, col3 = st.columns(3)
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
-turno_mañana = st.sidebar.checkbox('8:00 a 16:00')
-turno_tarde = st.sidebar.checkbox('16:00 a 00:00')
-turno_noche = st.sidebar.checkbox('00:00 a 08:00')
+turno = st.sidebar.checkbox('8:00 a 16:00')
+turno = st.sidebar.checkbox('16:00 a 00:00')
+turno = st.sidebar.checkbox('00:00 a 08:00')
 
 # Actividades
 st.sidebar.subheader('Actividades Service Desk 💻')
@@ -137,7 +137,7 @@ st.image(image, caption='',use_column_width=False)
 today = datetime.today().strftime('%d/%m/%y')
 
 # Mostrar la fecha actual en Streamlit
-st.title(f'Service Desk - Cambio de Turno - {today} - {option3}')
+st.title(f'Service Desk - Cambio de Turno - {today} - {turno}')
 
 # Mostrar Participantes
 # st.subheader('-')
