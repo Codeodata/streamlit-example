@@ -33,6 +33,7 @@ col1, col2, col3 = st.columns(3)
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
+checkbox_state = st.sidebar.checkbox('Selecciona esta un horario⌚', value=False)
 if checkbox_state:
  turno_m = st.sidebar.checkbox('Turno Mañana', value=False, key=1)
  turno_t = st.sidebar.checkbox('Turno Tarde', value=False, key=2)
