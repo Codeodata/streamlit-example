@@ -35,7 +35,7 @@ archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
 st.sidebar.radio('Seleccione su Turno⌚')
 st.radio('Seleccione una opción:', options=['Turno Mañana', 'Turno Tarde','Turno Noche'], index=0) 
-if options = 'Turno Mañana':
+if options='Turno Mañana':
     horario = '8:00 a 16:00hs'
 if options='Turno Tarde':
     horario = '16:00 a 00:00hs'
