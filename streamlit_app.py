@@ -185,11 +185,10 @@ if archivo_cdt:
     if num_filas == 0:
         st.subheader('No se reportaron nuevos casos en este turno')
     else:
-        st.subheader(f'Total de Casos: {num_filas}')    
-    
-    # Convertir el DataFrame a una tabla HTML
-    tabla_html = df.to_html(index=False)
-    st.write(tabla_html, unsafe_allow_html=True)    
+        st.subheader(f'Total de Casos: {num_filas}')
+        # Convertir el DataFrame a una tabla HTML
+        tabla_html = df.to_html(index=False)
+        st.write(tabla_html, unsafe_allow_html=True)
     
     #Tarjeta de casos Asignados:
     #asignado = (df['Estado'] == 'Asignado').sum()
