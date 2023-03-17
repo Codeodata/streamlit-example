@@ -33,7 +33,7 @@ col1, col2, col3 = st.columns(3)
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Define the radio button for selecting the turno
-st.sidebar.subheader('Seleccione su Turno⌚')
+st.sidebar.subheader('Turno⌚')
 options = st.sidebar.radio('', options=['Turno Mañana', 'Turno Tarde','Turno Noche'])
 
 # Use the selected option to set the corresponding value of horario
