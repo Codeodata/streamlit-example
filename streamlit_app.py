@@ -28,6 +28,17 @@ st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsaf
 # Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
 
+# SIDEBAR
+option3 = st.sidebar.radio(
+        'Horario ⌚',
+        ('','8:00 a 16:00','16:00 a 00:00','00:00 a 08:00')
+        )
+st.sidebar.subheader('Actividades Service Desk 💻')
+acti_cenam = st.sidebar.checkbox('Actividad Cenam')
+acti_aup = st.sidebar.checkbox('Actividad AUP')
+acti_ecuador = st.sidebar.checkbox('Actividad Ecuador')
+
+# PANTALLA PRINCIPAL
 # Mostrar los participantes
 with col1:
     option1 = st.selectbox(
@@ -68,17 +79,7 @@ def add_note():
   #  st.write(f" {note5}")
   #  st.subheader('-')
   #  st.write(f" {note6}")
-
-# Mostrar el campo de entrada de texto para agregar notas
-with col2:
-    st.subheader('Comentarios  del Turno  ')
-    note = st.text_input('Comentario 1', key='new_note')
-    note2 = st.text_input('Comentario 2', key='new_note2')
-with col3:
-    st.subheader('✏️🗒️')
-    note3 = st.text_input('Comentario 3', key='new_note3')
-    note4 = st.text_input('Comentario 4', key='new_note4')
-  
+    
 # Imagen    
 with col1:
     st_lottie_animation2 = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_m9zragkd.json")
@@ -90,6 +91,17 @@ with col1:
               height=None,
               width=None,
               key=None) 
+# Mostrar el campo de entrada de texto para agregar notas
+with col2:
+    st.subheader('Comentarios  del Turno  ')
+    note = st.text_input('Comentario 1', key='new_note')
+    note2 = st.text_input('Comentario 2', key='new_note2')
+with col3:
+    st.subheader('✏️🗒️')
+    note3 = st.text_input('Comentario 3', key='new_note3')
+    note4 = st.text_input('Comentario 4', key='new_note4')
+  
+
   #  st.subheader('-----------------------------------------------')
  #Imagen    
 #with col2:
@@ -111,11 +123,7 @@ with col1:
    #     note5 = st.text_input('', key='new_note5')
        #note6 = st.text_input('', key='new_note6')
     
-# Turnos
-option3 = st.sidebar.radio(
-        'Horario ⌚',
-        ('','8:00 a 16:00','16:00 a 00:00','00:00 a 08:00')
-        )
+
 
 #Mostrar Imagen TN3
 st.subheader('-')
@@ -133,15 +141,7 @@ st.title(f'Service Desk - Cambio de Turno - {today} - {option3}')
 # st.subheader('-')
 st.subheader(f"🧑‍💻Participantes: {option1} - {option2} - {option4}")
 
-
 add_note()
-
-st.sidebar.subheader('Actividades Service Desk 💻')
-
-acti_cenam = st.sidebar.checkbox('Actividad Cenam')
-acti_aup = st.sidebar.checkbox('Actividad AUP')
-acti_ecuador = st.sidebar.checkbox('Actividad Ecuador')
-
 
 if acti_cenam:
     with col1:
