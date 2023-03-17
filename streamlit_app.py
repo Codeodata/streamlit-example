@@ -141,8 +141,10 @@ today = datetime.today().strftime('%d/%m/%y')
 # Mostrar la fecha actual en Streamlit
 if turno_m:
     st.title(f'Service Desk - Cambio de Turno - {today} - 8:00 a 16:00hs')
+    
 if turno_t:
     st.title(f'Service Desk - Cambio de Turno - {today} - 16:00 a 00:00hs')
+    
 if turno_n:
     st.title(f'Service Desk - Cambio de Turno - {today} - 00:00 a 8:00hs')
     
