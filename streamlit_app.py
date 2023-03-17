@@ -182,6 +182,8 @@ if archivo_cdt:
     df = pd.read_csv(archivo_cdt, engine='python')
     #Tarjeta de Total de Casos
     num_filas = df.shape[0]
+    if num_filas = 0:
+        st.subheader('No se reportaron nuevos casos en este turno')    
     st.subheader(f'Total de Casos: {num_filas}')    
     
     # Convertir el DataFrame a una tabla HTML
