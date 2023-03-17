@@ -180,7 +180,14 @@ st.subheader('-')
 # Leer el excel
 if archivo_cdt:
     df = pd.read_csv(archivo_cdt, engine='python')
-    #num_filas = df.shape[0]
+    #Tarjeta de Total de Casos
+    num_filas = df.shape[0]
+    st.subheader(f'Total de Casos: {num_filas}')    
+    
+    # Convertir el DataFrame a una tabla HTML
+    tabla_html = df.to_html(index=False)
+    st.write(tabla_html, unsafe_allow_html=True)    
+    
     #Tarjeta de casos Asignados:
     #asignado = (df['Estado'] == 'Asignado').sum()
     #st.subheader(f'Casos en Asignados: {asignado}')
@@ -190,11 +197,8 @@ if archivo_cdt:
     #Tarjeta de casos en Investigacion:
     #investigacion = (df['Estado'] == 'En investigacion').sum()
     #st.subheader(f'Casos en Investigación: {investigacion}')
-    #Tarjeta de Total de Casos
-    #st.subheader(f'Total de Casos: {num_filas}')    
-    # Convertir el DataFrame a una tabla HTML
-    tabla_html = df.to_html(index=False)
-    st.write(tabla_html, unsafe_allow_html=True)
+
+
     
     
     
