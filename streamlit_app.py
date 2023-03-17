@@ -33,10 +33,10 @@ col1, col2, col3 = st.columns(3)
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
-option3 = st.sidebar.radio(
-        'Horario ⌚',
-        ('','8:00 a 16:00','16:00 a 00:00','00:00 a 08:00')
-        )
+turno_mañana = st.sidebar.checkbox('8:00 a 16:00')
+turno_tarde = st.sidebar.checkbox('16:00 a 00:00')
+turno_noche = st.sidebar.checkbox('00:00 a 08:00')
+
 # Actividades
 st.sidebar.subheader('Actividades Service Desk 💻')
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
