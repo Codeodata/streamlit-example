@@ -29,10 +29,15 @@ st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsaf
 col1, col2, col3 = st.columns(3)
 
 # SIDEBAR
+
+#Lector de archivo CSV
+archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
+# Horarios
 option3 = st.sidebar.radio(
         'Horario ⌚',
         ('','8:00 a 16:00','16:00 a 00:00','00:00 a 08:00')
         )
+# Actividades
 st.sidebar.subheader('Actividades Service Desk 💻')
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
 acti_aup = st.sidebar.checkbox('Actividad AUP')
@@ -57,9 +62,6 @@ with col3:
     ' Participante 3 🧑‍💻',
     ('','Novoa Carlos', 'Gonzales Ivan', 'Pacciarioni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
     )
-    
-#Lector de Archivo Excel
-archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
 # Comentarios    
 def add_note():
