@@ -33,7 +33,7 @@ col1, col2, col3 = st.columns(3)
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 # Horarios
-st.sidebar.radio('Seleccione su Turno⌚')
+st.sidebar.subheader('Seleccione su Turno⌚')
 st.radio('Seleccione una opción:', options=['Turno Mañana', 'Turno Tarde','Turno Noche'], index=0) 
 if options=='Turno Mañana':
     horario = '8:00 a 16:00hs'
