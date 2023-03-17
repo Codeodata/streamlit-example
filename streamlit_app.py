@@ -32,9 +32,18 @@ col1, col2, col3 = st.columns(3)
 
 #Lector de archivo CSV
 archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
-# Horarios
-st.sidebar.radio('Seleccione su Turno⌚', options=['','Turno Mañana', 'Turno Tarde','Turno Noche']) 
-  
+
+# Define the radio button for selecting the turno
+options = st.sidebar.radio('Seleccione su Turno⌚', options=['Turno Mañana', 'Turno Tarde','Turno Noche'])
+
+# Use the selected option to set the corresponding value of horario
+if options == 'Turno Mañana':
+    hora = '8:00 a 16:00hs'
+elif options == 'Turno Tarde':
+    hora = '16:00 a 00:00hs'
+elif options == 'Turno Noche':
+    hora = '00:00 a 8:00hs'
+    
 # Actividades
 st.sidebar.subheader('Actividades Service Desk 💻')
 acti_cenam = st.sidebar.checkbox('Actividad Cenam')
@@ -135,7 +144,7 @@ st.image(image, caption='',use_column_width=False)
 today = datetime.today().strftime('%d/%m/%y')
 
 # Mostrar la fecha actual en Streamlit
-st.title(f'Service Desk - Cambio de Turno - {today} - {options}')
+st.title(f'Service Desk - Cambio de Turno - {today} - {hora}')
 
 # Mostrar Participantes
 # st.subheader('-')
