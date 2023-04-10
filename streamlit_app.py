@@ -4,6 +4,7 @@ import plotly.express as px
 import openpyxl
 import requests
 import json
+import time
 
 from PIL import Image
 from datetime import datetime
@@ -165,7 +166,7 @@ if acti_cenam:
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
     st.subheader(f'➡️Actividad CENAM: {encargado} - Comienza a las {horario}hs')
-                 
+    time.sleep(60)             
 if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
