@@ -165,8 +165,8 @@ if acti_cenam:
         )
         horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'➡️Actividad CENAM: {encargado} - Comienza a las {horario}hs')
-    time.sleep(60)             
+    st.warning(f'➡️Actividad CENAM: {encargado} - Comienza a las {horario}hs')
+                
 if acti_aup:
     with col1:
         encargado2 = st.sidebar.selectbox(
@@ -175,7 +175,7 @@ if acti_aup:
         )
         horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
-    st.subheader(f'➡️Actividad AUP: {encargado2} - Comienza a las {horario2}hs')
+    st.warning(f'➡️Actividad AUP: {encargado2} - Comienza a las {horario2}hs')
     
 
 if acti_ecuador:
@@ -186,7 +186,7 @@ if acti_ecuador:
         )
         horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
     
-    st.subheader(f'➡️Actividad ECUADOR: {encargado3} - Comienza a las {horario3} hs')
+    st.warning(f'➡️Actividad ECUADOR: {encargado3} - Comienza a las {horario3} hs')
     
 
 st.subheader('-')
