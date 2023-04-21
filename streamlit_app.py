@@ -154,12 +154,7 @@ if choice == "Página 1":
             st.write(f" {note4}")  
             st.write(f" {note5}")
             st.write(f" {note6}")
-            
-
-        st.subheader('-----------------------------------------------')
-  
-   
-            
+                       
         # Comentarios Actividad
         #if acti_cenam or acti_aup or acti_ecuador:
         #  with col3:
