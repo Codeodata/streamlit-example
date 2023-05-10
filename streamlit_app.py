@@ -146,7 +146,7 @@ if choice == "Página 1":
             # Mostrar la lista de notas
             st.subheader(f"🔙Backlog:")
             for i, nota in enumerate(notas):
-                st.warning(f"{i+1}. {nota}")
+                st.exception(f"{i+1}. {nota}")
             st.subheader(f"🗒️Comentarios del Turno:")
             st.write(f" {note}")
             st.write(f" {note2}")
