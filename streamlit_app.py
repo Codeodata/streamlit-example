@@ -144,17 +144,17 @@ if choice == "Página 1":
         # Aquí puedes agregar el código para guardar la nota en una base de datos.
         #   st.subheader('-')         
             # Mostrar la lista de notas
-        st.subheader("🔙 Backlog")
-        for i, nota in enumerate(notas):
-            e = f"<span style='color:red'>{i+1}. {nota}</span>"
-            st.markdown(e, unsafe_allow_html=True)
-        st.subheader(f"🗒️Comentarios del Turno:")
-        st.write(f" {note}")
-        st.write(f" {note2}")
-        st.write(f" {note3}")
-        st.write(f" {note4}")  
-        st.write(f" {note5}")
-        st.write(f" {note6}")
+            st.subheader("🔙 Backlog: ")
+            for i, nota in enumerate(notas):
+                e = f"<span style='color:red'>{i+1}. {nota}</span>"
+                st.markdown(e, unsafe_allow_html=True)
+            st.subheader(f"🗒️Comentarios del Turno:")
+            st.write(f" {note}")
+            st.write(f" {note2}")
+            st.write(f" {note3}")
+            st.write(f" {note4}")  
+            st.write(f" {note5}")
+            st.write(f" {note6}")
                        
         # Comentarios Actividad
         #if acti_cenam or acti_aup or acti_ecuador:
