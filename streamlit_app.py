@@ -139,8 +139,7 @@ if choice == "Página 1":
         nota_eliminar = st.selectbox('Eliminar Backlog', notas)
         if st.button('Eliminar'):
             eliminar_nota(nota_eliminar)
-
-                # Comentarios    
+        #Comentarios    
         def add_note():
         # Aquí puedes agregar el código para guardar la nota en una base de datos.
         #   st.subheader('-')         
@@ -148,7 +147,6 @@ if choice == "Página 1":
             st.subheader(f"🔙Backlog:")
             for i, nota in enumerate(notas):
             st.warning(f'{i+1}. {nota}')
-
             st.subheader(f"🗒️Comentarios del Turno:")
             st.write(f" {note}")
             st.write(f" {note2}")
