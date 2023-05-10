@@ -5,7 +5,6 @@ import openpyxl
 import requests
 import json
 import time
-import smtplib
 import pickle
 
 from PIL import Image
@@ -139,6 +138,7 @@ if choice == "Página 1":
         nota_eliminar = st.selectbox('Eliminar Backlog', notas)
         if st.button('Eliminar'):
             eliminar_nota(nota_eliminar)
+            
         #Comentarios    
         def add_note():
         # Aquí puedes agregar el código para guardar la nota en una base de datos.
