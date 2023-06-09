@@ -24,14 +24,9 @@ def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
         return None
+        return r.json()
 
-    return r.json()
-
-# Crea una barra de navegación para cambiar de pestaña
-#menu = ["Página 1", "Página 2"]
-#choice = st.sidebar.selectbox("Seleccione una página", menu)
-
-        # URL de la API que exporta los datos
+       # URL de la API que exporta los datos
         url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
 
         # Configurar la interfaz de usuario con Streamlit
