@@ -1,4 +1,6 @@
 import streamlit as st
+import webbrowser
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 import openpyxl
@@ -37,6 +39,14 @@ if choice == "Página 1":
         col1, col2, col3 = st.columns(3)
 
         # SIDEBAR
+        
+        # URL de la API que exporta los datos
+        url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
+
+        # Agregar el botón que abre el enlace
+        if st.sidebar.button("Descargar Casos"):
+            webbrowser.open(url_api)
+
         #Lector de archivo CSV
         archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
@@ -235,3 +245,6 @@ if choice == "Página 1":
             # Agrega contenido a la segunda sección
 
 #else:
+
+
+
