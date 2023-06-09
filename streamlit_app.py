@@ -26,18 +26,18 @@ def load_lottieurl(url: str):
         return None
         return r.json()
 
-       # URL de la API que exporta los datos
-        url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
+ # URL de la API que exporta los datos
+ url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
 
-        # Configurar la interfaz de usuario con Streamlit
-        st.title("Obtener datos desde una API")
+ # Configurar la interfaz de usuario con Streamlit
+ st.title("Obtener datos desde una API")
 
-        # Agregar el botón que abre el enlace en una nueva pestaña
-        if st.button("Abrir enlace"):
-            webbrowser.open_new_tab(url_api)
+ # Agregar el botón que abre el enlace en una nueva pestaña
+ if st.button("Abrir enlace"):
+    webbrowser.open_new_tab(url_api)
 
-        # Dividir la pantalla en dos columnas
-        col1, col2, col3 = st.columns(3)
+ # Dividir la pantalla en dos columnas
+ col1, col2, col3 = st.columns(3)
 
         # SIDEBAR
         #Lector de archivo CSV
