@@ -28,21 +28,18 @@ def load_lottieurl(url: str):
     return r.json()
 
 # Crea una barra de navegación para cambiar de pestaña
-menu = ["Página 1", "Página 2"]
-choice = st.sidebar.selectbox("Seleccione una página", menu)
+#menu = ["Página 1", "Página 2"]
+#choice = st.sidebar.selectbox("Seleccione una página", menu)
 
-# Crea una sección para cada página
-if choice == "Página 1":
-        
         # URL de la API que exporta los datos
         url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
-        # Configurar la interfaz de usuario con Streamlit
-        st.title("Descargar Casos Freshservice")
-        # Agregar el botón que abre el enlace
-        if st.button("Abrir enlace"):
-            webbrowser.open(url_api)
 
-        st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsafe_allow_html=True)
+        # Configurar la interfaz de usuario con Streamlit
+        st.title("Obtener datos desde una API")
+
+        # Agregar el botón que abre el enlace en una nueva pestaña
+        if st.button("Abrir enlace"):
+            webbrowser.open_new_tab(url_api)
 
         # Dividir la pantalla en dos columnas
         col1, col2, col3 = st.columns(3)
