@@ -107,7 +107,7 @@ with col3:
      note6 = st.text_input('Comentario 6', key='new_note6')
          
 # Cargar las notas desde el archivo si existe
-  try:
+try:
   with open('notas.pickle', 'rb') as f:
         notas = pickle.load(f)
         except FileNotFoundError:
