@@ -118,8 +118,8 @@ def agregar_nota(nota):
     guardar_notas()
 # Eliminar una nota existente
 def eliminar_nota(nota):
-notas.remove(nota)
-guardar_notas()
+    notas.remove(nota)
+    guardar_notas()
 
 # Guardar las notas en el archivo
 def guardar_notas():
