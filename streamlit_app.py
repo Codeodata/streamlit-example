@@ -33,20 +33,21 @@ choice = st.sidebar.selectbox("Seleccione una página", menu)
 
 # Crea una sección para cada página
 if choice == "Página 1":
+        
+        # URL de la API que exporta los datos
+        url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
+        # Configurar la interfaz de usuario con Streamlit
+        st.title("Descargar Casos Freshservice")
+        # Agregar el botón que abre el enlace
+        if st.button("Abrir enlace"):
+            webbrowser.open(url_api)
+
         st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsafe_allow_html=True)
 
         # Dividir la pantalla en dos columnas
         col1, col2, col3 = st.columns(3)
 
         # SIDEBAR
-        
-        # URL de la API que exporta los datos
-        url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
-
-        # Agregar el botón que abre el enlace
-        if st.button("Descargar Casos"):
-            webbrowser.open(url_api)
-
         #Lector de archivo CSV
         archivo_cdt = st.sidebar.file_uploader('Choose a CSV file', type='csv')
 
