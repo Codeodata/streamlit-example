@@ -186,8 +186,7 @@ if acti_cenam:
                 ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','Llanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
                 )
                 horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
-
-            st.info(f'➡️Actividad CENAM: {encargado} - Comienza a las {horario}hs')
+                st.info(f'➡️Actividad CENAM: {encargado} - Comienza a las {horario}hs')
                         
 if acti_aup:
             with col1:
@@ -195,9 +194,9 @@ if acti_aup:
                 'Encargado 2:',
                 ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','Llanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
                 )
-            horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
-            st.info(f'➡️Actividad AUP: {encargado2} - Comienza a las {horario2}hs')
-            time.sleep(3)
+                horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
+                st.info(f'➡️Actividad AUP: {encargado2} - Comienza a las {horario2}hs')
+                time.sleep(3)
             
 
 if acti_ecuador:
@@ -207,10 +206,9 @@ if acti_ecuador:
                 ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','Llanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
                 )
                 horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
-
-st.info(f'➡️Actividad ECUADOR: {encargado3} - Comienza a las {horario3} hs')
+                st.info(f'➡️Actividad ECUADOR: {encargado3} - Comienza a las {horario3} hs')
             
-      # Leer el excel
+# Leer el excel
 if archivo_cdt:
    df = pd.read_csv(archivo_cdt, engine='python')
 #Tarjeta de Total de Casos
