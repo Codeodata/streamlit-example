@@ -124,7 +124,7 @@ def eliminar_nota(nota):
 # Guardar las notas en el archivo
 def guardar_notas():
     with open('notas.pickle', 'wb') as f:
-    pickle.dump(notas, f)
+        pickle.dump(notas, f)
 # Formulario para agregar una nueva nota
     nueva_nota = st.text_input('Backlog')
     if st.button('Agregar'):
