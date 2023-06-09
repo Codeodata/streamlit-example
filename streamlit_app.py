@@ -44,7 +44,7 @@ if choice == "Página 1":
         url_api = "https://tecnotreeamericashelpdesk.freshservice.com/api/v2/analytics/export?id=5f303192-64e4-4047-b037-1782066871fa"
 
         # Agregar el botón que abre el enlace
-        if st.sidebar.button("Descargar Casos"):
+        if st.button("Descargar Casos"):
             webbrowser.open(url_api)
 
         #Lector de archivo CSV
