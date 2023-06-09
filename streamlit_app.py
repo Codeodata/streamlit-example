@@ -128,11 +128,11 @@ def guardar_notas():
 # Formulario para agregar una nueva nota
     nueva_nota = st.text_input('Backlog')
     if st.button('Agregar'):
-    agregar_nota(nueva_nota)
+        agregar_nota(nueva_nota)
 # Formulario para eliminar una nota existente
     nota_eliminar = st.selectbox('Eliminar Backlog', notas)
     if st.button('Eliminar'):
-    eliminar_nota(nota_eliminar)
+        eliminar_nota(nota_eliminar)
          
         #Comentarios    
         def add_note():
