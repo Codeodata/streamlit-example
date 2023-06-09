@@ -36,7 +36,7 @@ st.title("Obtener datos desde una API")
 if st.button("Abrir enlace"):
     webbrowser.open_new_tab(url_api)
 
- # Dividir la pantalla en dos columnas
+# Dividir la pantalla en dos columnas
 col1, col2, col3 = st.columns(3)
 # SIDEBAR
 #Lector de archivo CSV
