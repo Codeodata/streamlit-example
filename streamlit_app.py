@@ -110,7 +110,7 @@ with col3:
 try:
   with open('notas.pickle', 'rb') as f:
         notas = pickle.load(f)
-        except FileNotFoundError:
+  except FileNotFoundError:
         notas = []
 # Agregar una nueva nota
 def agregar_nota(nota):
