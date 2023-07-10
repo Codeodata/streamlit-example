@@ -229,9 +229,17 @@ if choice == "Página 1":
 
         st.subheader('-')
 
-        # Leer el excel
+         # Leer el excel
         if archivo_cdt:
             df = pd.read_csv(archivo_cdt, engine='python')
+            # Filter rows based on "Tipo de Actividad" column
+            backlog_df = df[df['Tipo de Actividad'] == 'Tariff Activities']
+
+            # Save filtered rows to the backlog
+            for _, row in backlog_df.iterrows():
+                e = f"Backlog: {row['Subject']}"  # Customize the note format based on your column nsames
+                agregar_nota(e)
+                
             #Tarjeta de Total de Casos
             num_filas = df.shape[0]
             if num_filas == 0:
@@ -240,10 +248,5 @@ if choice == "Página 1":
                 st.subheader(f'Total de Casos: {num_filas}')
                 # Convertir el DataFrame a una tabla HTML
                 tabla_html = df.to_html(index=False)
-                st.write(tabla_html, unsafe_allow_html=True)   
-
-            # Agrega contenido a la segunda sección
-
-#else:
-
+                st.write(tabla_html, unsafe_allow_html=True)  
 
