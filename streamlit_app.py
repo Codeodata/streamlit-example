@@ -81,21 +81,21 @@ if choice == "Página 1":
     with col1:
         option1 = st.selectbox(' Participante 1 🧑‍💻',
                                ('', 'Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías',
-                                'LLanos Brian', 'Godoy Emiliano', 'Fernandez Diego', 'Aviles Paula',
+                                'Llanos Brian', 'Godoy Emiliano', 'Fernandez Diego', 'Aviles Paula',
                                 'Gimenez Rodrigo')
                                )
 
     with col2:
         option2 = st.selectbox(' Participante 2 👩‍💻',
                                ('', 'Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías',
-                                'LLanos Brian', 'Godoy Emiliano', 'Fernandez Diego', 'Aviles Paula',
+                                'Llanos Brian', 'Godoy Emiliano', 'Fernandez Diego', 'Aviles Paula',
                                 'Gimenez Rodrigo')
                                )
 
     with col3:
         option4 = st.selectbox(' Participante 3 🧑‍💻',
                                ('', 'Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías',
-                                'LLanos Brian', 'Godoy Emiliano', 'Fernandez Diego', 'Aviles Paula',
+                                'Llanos Brian', 'Godoy Emiliano', 'Fernandez Diego', 'Aviles Paula',
                                 'Gimenez Rodrigo')
                                )
 
@@ -177,7 +177,7 @@ if choice == "Página 1":
             with col1:
                 encargado = st.sidebar.selectbox(
                 'Encargado:',
-                ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
+                ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','Llanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
                 )
                 horario = st.sidebar.radio("Inicio Actividad CENAM",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -187,7 +187,7 @@ if choice == "Página 1":
             with col1:
                 encargado2 = st.sidebar.selectbox(
                 'Encargado 2:',
-                ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
+                ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','Llanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
                 )
                 horario2 = st.sidebar.radio("Inicio Actividad AUP",('','22:00','23:00','00:00','1:00','2:00'))
 
@@ -199,7 +199,7 @@ if choice == "Página 1":
             with col1:
                 encargado3 = st.sidebar.selectbox(
                 'Encargado 3:',
-                ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','LLanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
+                ('-','Novoa Carlos', 'Gonzales Ivan', 'Pacciaroni Gastón', 'Barrionuevo Matías','Llanos Brian','Godoy Emiliano','Fernandez Diego' ,'Aviles Paula','Gimenez Rodrigo')
                 )
                 horario3 = st.sidebar.radio("Inicio Actividad ECUADOR",('','22:00','23:00','00:00','1:00','2:00'))
 
