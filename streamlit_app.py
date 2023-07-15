@@ -33,11 +33,11 @@ def load_lottieurl(url: str):
     return r.json()
 
 # Crea una barra de navegación para cambiar de pestaña
-menu = ["Página 1"]
-# choice = st.sidebar.selectbox("Seleccione una página", menu)
+menu = ["Página 1","Página 2]
+ choice = st.sidebar.selectbox("Seleccione una página", menu)
 
 # Crea una sección para cada página
-if menu == "Página 1":
+if choice == "Página 1":
     st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsafe_allow_html=True)
 
     # Dividir la pantalla en dos columnas
