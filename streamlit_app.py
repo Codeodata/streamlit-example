@@ -37,7 +37,7 @@ menu = ["Página 1"]
 # choice = st.sidebar.selectbox("Seleccione una página", menu)
 
 # Crea una sección para cada página
-if choice == "Página 1":
+if menu == "Página 1":
     st.write("<h1 style='font-size:60px'>Cambio de Turno - Service Desk</h1>", unsafe_allow_html=True)
 
     # Dividir la pantalla en dos columnas
