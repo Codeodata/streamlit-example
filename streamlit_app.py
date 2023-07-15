@@ -126,6 +126,17 @@ if choice == "Página 1":
         with open('notas.pickle', 'wb') as f:
             pickle.dump(st.session_state.notas, f)
 
+    # Imagen    
+    with col1:
+         st_lottie_animation = load_lottiefile("coding.json")
+         st_lottie(st_lottie_animation,
+                     speed=0.9,
+                     reverse=False,
+                    loop=True,
+                    quality="low",
+                    height=None,
+                    width=None,
+                     key=None) 
     # Formulario para agregar una nueva nota
     nueva_nota = st.text_input('Backlog')
     if st.button('Agregar'):
