@@ -34,7 +34,7 @@ def load_lottieurl(url: str):
 
 # Crea una barra de navegación para cambiar de pestaña
 menu = ["Página 1","Página 2"]
-choice = st.sidebar.selectbox("Seleccione una página", menu)
+choice = st.selectbox("Seleccione una página", menu)
 
 # Crea una sección para cada página
 if choice == "Página 1":
