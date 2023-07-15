@@ -34,7 +34,7 @@ def load_lottieurl(url: str):
 
 # Crea una barra de navegación para cambiar de pestaña
 menu = ["Página 1", "Página 2"]
-choice = st.sidebar.selectbox("Seleccione una página", menu)
+# choice = st.sidebar.selectbox("Seleccione una página", menu)
 
 # Crea una sección para cada página
 if choice == "Página 1":
@@ -224,13 +224,13 @@ if choice == "Página 1":
             df = pd.read_csv(archivo_cdt, engine='python')
             # Filter rows based on "Tipo de Actividad" column
             backlog_df = df[df['Tipo de Actividad'] == 'Tariff Activities']
-
+            if not backlog_df.empty:
+                st.sidebar.error("AGREGAR ACTIVIDADES AL BACKLOG",icon="🚨")
             # Save filtered rows to the backlog
             #for _, row in backlog_df.iterrows():
              #   e = f"Backlog: {row['Subject']}"  # Customize the note format based on your column nsames
                 #agregar_nota(e)
-            if not backlog_df.empty:
-                st.sidebar.error("AGREGAR ACTIVIDADES AL BACKLOG",icon="🚨")
+
             #Tarjeta de Total de Casos
             num_filas = df.shape[0]
             if num_filas == 0:
